@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+.up{
+    display: flex;
+    background-color: yellow;
+    margin: 0px 0px 10px 0px;
+    height: 25px;
+    padding-top: 5px;
+}
+#main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(1,150px);
+    gap: 10px;
+    margin: auto;
+}
+.One{
+    padding: 5px;
+    border: 1px solid red;
+    background-color: red;
+    font-size: 12px;
+}
+.Two{
+    border: 1px solid green;
+    background-color: green;
+    padding: 5px;
+    font-size: 12px;
+}
+.Three{
+    border: 1px solid blue;
+    background-color: blue;
+    padding: 5px;
+    font-size: 12px;
+}
+.Four{
+    border: 1px solid grey;
+    background-color: grey;
+    padding: 5px;
+    font-size: 12px;
+}
+@media only screen and (max-width: 600px) {
+        .up{
+        display: flex;
+        background-color: yellow;
+        margin: 0px 0px 10px 0px;
+        height: 25px;
+        padding-top: 5px;
+        }
+        #main{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,150px);
+        gap: 10px;
+        margin: auto;
+        }
+    }
+    @media only screen and (min-width:600px) and (max-width: 900px) {
+        .up{
+        display: flex;
+        background-color: yellow;
+        margin: 0px 0px 10px 0px;
+        height: 25px;
+        padding-top: 5px;
+        }
+        #main{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: repeat(2,150px);
+        gap: 10px;
+        margin: auto;
+        }
+    }
+  
+
+</style>
+</head>
+<body>
+    <!-- Tag -->
+    <div class="up">Navigation</div>
+    <!-- parent -->
+    <div id="main">
+        <!-- short -->
+        <div class="One">Box 1</div>
+        <div class="Two">Box 2</div>
+        <div class="Three">Box 3</div>
+        <div class="Four">Box 4</div>
+    </div>
+</body>
+</html>

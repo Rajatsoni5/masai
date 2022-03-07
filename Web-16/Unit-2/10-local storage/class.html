@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local storage
+    </title>
+</head>
+<body>
+    <h1></h1>
+    <button id="inc">Increment</button>
+    <button id="dec">Decrement</button>
+</body>
+</html>
+
+<script>
+    document.querySelector("#inc").addEventListener("click", incFun);
+    var counter =0;
+    document.querySelector("h1").innerText = counter
+    function incFun(){
+        counter++;
+        document.querySelector("h1").innerText = counter
+    }
+    document.querySelector("#dec").addEventListener("click", decFun);
+    function decFun(){
+        counter--;
+        document.querySelector("h1").innerText = counter
+    }
+</script>

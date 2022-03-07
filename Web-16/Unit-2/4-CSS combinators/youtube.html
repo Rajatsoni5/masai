@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinators</title>
+    <style>
+        /* Use one */
+        /* Decendants */
+        div p{
+        background-color: black;
+        color: white;
+    }
+    /* child */
+    /* div>p{
+        background-color: black;
+        color: white;
+    } */
+/* adjacent sibling */
+/* div+p{
+        background-color: black;
+        color: white;
+    } */
+    /* general sibling */
+    /* div~p{
+        background-color: black;
+        color: white;
+    } */
+    </style>
+    
+</head>
+<body>
+    <h1>Combinator Explained</h1>
+    <!-- Parent (Decendant will work on complete div) -->
+    <div>
+        <!-- direct child (As we use span on 3rd so that's not direct child)-->
+        <p>This is para 1</p>
+        <p>This is para 2</p>
+        <span><p>This is para 3</p></span>
+    </div>
+<!-- adjacent sibling(Immidiate sibling -- 4) -->
+<!-- HOwever, general sibling are all after div (4,5) -->
+    <p>This is para 4</p>
+    <p>This is para 5</p>
+    
+</body>
+</html>

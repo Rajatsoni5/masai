@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML combinators</title>
+    <style>
+        .main{
+            display: grid;
+            justify-content: center;
+        }
+    
+        .ok{
+            height: 130px;
+            width: 100px;
+            display: inline-block;
+            /* display: flex; */
+            /* flex-direction: column; */
+            background-color: white;
+            align-items: baseline;
+            margin: 2px;
+            border-radius: 2px;
+            border-style: groove;
+            
+        }
+        img{
+            width: 100px;
+        }
+        h3{
+            font-size: 7px;
+            margin: 2px;
+        }
+        p{
+            font-size: 5px;
+            padding-top: 25px;
+        }
+  
+    </style>
+</head>
+<body>
+    <!-- parent div -->
+    <div class="main">
+    <div class="Upper">
+        <div class="ok">
+            <img src="https://via.placeholder.com/140x100"/>
+            <h3>UK and US join forces to strike back in cyberspace.</h3>
+            <p>TECHNOLOGY</p>
+        </div>
+        <div class="ok">
+            <img src="https://via.placeholder.com/140x100"/>
+           <h3>Lady Gaga took personal trauma into Gucci role.</h3>
+           <P>ENTAIRNMENT & ARTS</P>
+        </div>
+
+        <div class="ok">
+            <img src="https://via.placeholder.com/140x100"/>
+            <h3>The mothers using Instagram to offer advice to new mums.</h3>
+            <p>BUSSINESS</p>
+        </div>
+    </div>
+    <!-- 2nd parent -->
+    <div class="lower">
+        <div class="ok">
+            <img src="https://via.placeholder.com/140x100"/>
+            <h3>'I've seen irreversible change but hope too for planet'</h3>
+            <P>SCIENCE & ENVIORNMENT</P>
+        </div>
+        <div class="ok">
+            <img src="https://via.placeholder.com/140x100"/>
+            <h3>Full force of covid hitting Germany, warns markel.</h3>
+            <P>EUROPE</P>
+        </div>
+        <div class="ok">
+            <img src="https://via.placeholder.com/140x100"/>
+            <h3>Baby elephant dies after losing half its trunk</h3>
+            <P>ASIA</P>
+        </div>
+    </div>
+</div>
+</body>
+</html>

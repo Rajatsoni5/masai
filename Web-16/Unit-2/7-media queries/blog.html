@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            text-align: center;
+        }
+        #main{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 260px;
+            column-gap: 10px;
+            width: 500px;
+            margin: auto;
+        }
+        img{
+            height:60%;
+            width: 100%;
+        }
+        p{
+            height: justify;
+            width: justify;
+            font-size: 8px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        @media only screen and (min-width:599px) and (max-width:900px) {
+            h2{
+            text-align: center;
+        }
+        #main{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 260px 260px;
+            column-gap: 10px;
+            width: 500px;
+            margin: auto;
+        }
+            
+        }
+        @media only screen and (max-width:599px) {
+            h2{
+            text-align: center;
+        }
+        #main{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 260px 260px;
+            column-gap: 10px;
+            width: 500px;
+            margin: auto;
+        }
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- Head -->
+    <h2>OUR BLOG</h2>
+    <!--parent boxe -->
+    <div id="main">
+    <!-- short box -->
+        <div class="box">
+            <img src="https://image.made-in-china.com/43f34j00BDCUjrIyCzcL/Hard-Shell-Travel-cosmetic-Case-Waterproof-Makeup-Handy-Bag-Dual-Use-Bag-Mini-Suitcase-Handbag-Case-Crossbody-Bag-Case-with-Wrist-Strap.webp"/>
+            <p><b>Black Friday Guide: Best Salese & Discount Codes</b></p>
+            <p>by Nancy Ward on July 22,2017</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis impedit vitae minus quae doloribus, at voluptatem. Repudiandae minima culpa distinctio?</p>
+        </div>
+        <div class="box">
+            <img src="https://media.vogue.co.uk/photos/5e981bf8eb104e0008b35453/16:9/w_1600%2Cc_limit/GettyImages-1133271785.jpg"/>
+            <p><b>The White Sneakers Nearly Every Fashion Girls Own</b></p>
+            <p>By nancy Ward on July 18,2017</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo doloribus nihil ea tempora voluptatibus voluptate asperiores nisi, voluptatum perspiciatis deleniti?</p>
+        </div>
+        <div class="box">
+            <img src="https://mashedradish.files.wordpress.com/2017/03/random.jpg?w=702"/>
+            <p><b>New York SS 2018 Streer Style: Annina</b></p>
+            <p>By Nancy Ward on July 2,2017</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore accusantium deserunt suscipit corporis voluptatibus. A aut magnam excepturi sapiente corrupti.</p>
+        </div>
+    </div>
+</body>
+</html>

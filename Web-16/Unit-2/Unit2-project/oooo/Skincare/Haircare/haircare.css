@@ -1,0 +1,148 @@
+#first{
+    display: flex;height: 50px;width: 1000px;border: 1px solid white;margin-left: 60px;
+}
+.class1{
+    height: 40px;width: 170px;border: 2px solid red;margin: 10px;border-radius: 5px;
+}
+.t1{
+    padding-top: 10px;padding: auto;margin: auto;text-align: center;
+}
+#second{
+    display: flex;height: 50px;width: 500px;border: 1px solid white;margin-left: 60px;
+}
+#third{
+    height: 700px;width: 90%;border: 1px solid white;margin: auto;display: flex;
+}
+#class2{
+    height: 100%;width: 60%;border: 1px solid white;
+}
+.class3{
+    height: 100%;width: 40%;border: 1px solid white;background-color: rgb(228, 221, 211);
+}
+#fourth{
+    height: 550px;width: 90%;border: 1px solid white;margin-top: 20px;margin-bottom: 20px;margin-left: 50px;display: flex;
+}
+.class4{
+    height: 100%;width: 30%;border: 1px solid white;margin-left: 20px;margin-right: 15px;
+}
+#fifth{
+    height: 50px;width: 350px;border: 1px solid white;margin: auto;display: flex;
+}
+.class5{
+    height: 100%;width: 13%;margin-left: 5px;margin-right: 5px;
+}
+#sixth{
+    height: 300px;width: 100%;display: flex;background-color: rgb(247, 241, 241);
+}
+.class6{
+    height: 98%;width: 23%;margin-left: 15px;margin-right: 15px;
+}
+.class6 > ul{
+    font-size: 18px;
+}
+.class7{
+    height: 80%;width: 17%;background-color: rgb(247, 241, 241);margin: 5px;
+}
+.content1>ul{
+list-style-type: none;
+text-align: center;
+text-decoration: none;
+}
+.content1>ul>li{
+display: inline-block;
+padding: 0 15px;
+}
+.content1>ul>li>a{
+text-decoration: none;
+font-family: sans-serif;
+word-spacing: 10px;
+}
+.style8{
+display: flex;
+height: 80px;
+width:70%;
+padding-left: 280px;
+}
+.style8>div :first-child{
+margin-top:20px;
+height: 45px;
+margin-left: 200px;
+}
+
+#input18{
+border-radius: 15px; 
+height: 30px;
+width:220px;
+border: 1px solid white;
+text-align: center;
+box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+}
+#navimg8{
+position:absolute;
+display: grid;
+grid-template-columns: repeat(6,200px);
+grid-template-rows: 200px;
+width:60%;
+margin-left:120px;
+text-align: center;
+
+
+}
+#about{
+text-align:justify;
+padding-left: 200px;
+margin-left:900px;
+font-family: sans-serif;
+}
+#navscroll{
+   position:relative;
+}
+@media (min-width: 268px) and (max-width:480px){
+    #first{
+        display: inline;
+    }
+    .content1{
+        display: inline;
+    }
+    .style8{
+        display: inline;
+    }
+    #input18{
+        display: inline;
+    }
+    #navimg8{
+        display: inline;
+    }
+    #navscroll{
+        display: inline;
+    }
+    #about{
+        display: inline;
+    }
+    #second{
+        display: inline;
+    }
+    #third{
+        display: inline;
+    }
+    .class3{
+        display:inline;
+    }
+    #fourth{
+        display: inline;
+    }
+    #fifth{
+        display: inline;
+    }
+    #sixth{
+        display: inline;
+    
+    }
+    .class7{
+        display: inline;
+    }
+    .class6{
+        display: inline;
+    }
+}

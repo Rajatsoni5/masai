@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector</title>
+    <style>
+        /* id selextor */
+        #redelement{
+            color: red;
+        }
+        /* element selector */
+        p{
+            color: green;
+        }
+        /* class selector */
+        .change{
+            background-color: yellowgreen;
+        }
+        /* Grouping selector */
+        footer, span{
+            background-color: blue;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h3>CSS selector</h3>
+    <!-- As we mention P on the style so all the "p" will get green. even the p under div too. -->
+    <p>This is a simple para for CSS Selector</p>
+    <!-- Here we give an id" to specify p for color change. SO it's color will be red and rest p's color same. -->
+    <p id="redelement">Another para for testing</p>
+    <div>
+        <p class="change">Another para for testing</p>
+        <span> this is span</span>
+    </div>
+    <p>Another para for testing</p>
+    <footer>This is footar</footer>
+</body>
+</html>

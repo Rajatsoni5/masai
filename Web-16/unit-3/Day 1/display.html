@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="show_number">
+      <!--Show the generated number in this div only. do not create additional HTML elements, it should show only number and NOTHING ELSE"-->
+    </div>
+  </body>
+</html>
+
+<script>
+  var number = localStorage.getItem("number")
+  document.getElementById("show_number").innerText = number;
+  if(number == 6){
+    document.getElementById("show_number").style.color = "green";
+  }else if(number == 1){
+    document.getElementById("show_number").style.color = "Yellow";
+  } else {
+    document.getElementById("show_number").style.color = "red";
+  }
+</script>

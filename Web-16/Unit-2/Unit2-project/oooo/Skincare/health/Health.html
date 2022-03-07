@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health & Wellness</title>
+    <link rel="stylesheet" href="Health.css">
+    <script src="https://kit.fontawesome.com/2c1e8b5ee1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="style8">
+        <div style="text-align:center"><img  src="https://cdn2.stylecraze.com/wp-content/themes/buddyboss-child/images/sc-logo.png" ></div>
+        <div><input type="text" value="" placeholder="search" id="input18" ><i class="fa-regular fa-magnifying-glass"></i></div>
+       
+    </div>
+    <div class="content1">
+        <ul>
+            <li><a id="makeup8" href="../makeup/makeup.html">MAKEUP</a></li> 
+            <li><a id="haircare8"href="../Haircare/haircare.html">HAIR CARE</a></li></li>
+            <li><a id="skincare8"href="../skincare/skincare.html">SKIN CARE</a></li>
+            <li><a id="hairstle8" href="../hairstyle/hairstyle.html">HAIR STYLE</a></li>
+            <li><a id="health8" href="../health/health.html">HEALTH & WELLNESS</a></li> 
+            <li><a id="new8" href="../news/news.html">NEWS</a></li>
+            <li><a href="../tools/tools.html">TOOLS</a></li>
+            <li><a href="../product/product.html">PRODUCTS</a></li>
+            <li><a id="about8" href="../about us/aboutus.html">ABOUTS US</a></li>
+        </ul>
+        
+<!-- ----------------------------------------------------------------------------------------------------- -->
+
+
+
+
+    </div>
+    
+    <div id="navimg8" >
+        <div id="about"></div>  
+    </div>
+    
+    
+</body>
+</html>
+<script>
+    var arr=[
+        {
+            image:"https://cdn2.stylecraze.com/wp-content/uploads/2015/03/10-Stylish-Bob-Hairstyles-For-Oval-Faces-1-267x300.jpg.webp",
+            para:"10 Stylish Bob Hairstyles For Oval Faces",
+            para1:"Bob hairstyle",
+        },
+        {
+            image:"https://cdn2.stylecraze.com/wp-content/uploads/2014/02/Top-10-Japanese-Short-Bob-Hairstyles-You-Should-Try-267x300.jpg.webp",
+            para:"Top 10 Japanese Short Bob Hairstyles You Should Try",
+            para1:"Bride hairstyle"
+        },
+        {
+            image:"https://cdn2.stylecraze.com/wp-content/uploads/2014/01/Latest-And-Most-Popular-Messy-Bob-Hairstyles-For-Women-267x300.jpg.webp",
+            para:"80 Latest And Most Popular Messy Bob Hairstyles For Women",
+            para1:"Bridal hairstyle",
+        },{
+            image:"https://cdn2.stylecraze.com/wp-content/uploads/2014/01/50-Most-Popular-Bob-Shaped-Hairstyles-267x300.jpg.webp",
+            para:"50 Most Popular Bob Shaped Hairstyles",
+            para1:"Curly hairstyle",
+        },
+        {
+            image:"https://cdn2.stylecraze.com/wp-content/uploads/2014/01/20-Stunning-Bob-Haircuts-With-Bangs-1-267x300.jpg.webp",
+            para:"20 Stunning Bob Haircuts With Bangs",
+            para1:"Celebrity hairstyle",
+        },
+        {
+            image:"https://cdn2.stylecraze.com/wp-content/uploads/2015/05/Partially-Highlighted-Layers.jpg.webp",
+            para:"40 Chic Feathered Hairstyles For Short, Medium, And Long Hair",
+            para1:"Trend hairstyle",
+        }
+    ]
+    
+document.querySelector("#hairstle8").addEventListener("mouseenter",display)
+var data =JSON.parse(localStorage.getItem("data"))||[]
+function display(event){
+document.querySelector("#navimg8").innerHTML=""
+event.preventDefault();
+arr.map(function(ele){
+var maindiv=document.createElement("div");
+
+    maindiv.setAttribute("class","displaynavmain")
+    maindiv.style.backgroundColor='white';
+    var div=document.createElement("div");
+    div.setAttribute("class","displaynav")
+    var p1=document.createElement("p")
+    p1.innerText=ele.para1;
+    var img=document.createElement("img")
+    img.setAttribute("src",ele.image)
+    img.setAttribute("class","image8")
+    var p=document.createElement("p")
+    p.innerText=ele.para;
+    div.append(p1,img,p)
+    maindiv.append(div)
+    document.querySelector("#navimg8").append(maindiv)
+    localStorage.setItem("data",JSON.stringify(data))
+})
+}
+document.querySelector("#hairstle8").addEventListener("mouseout",displayout)
+function displayout() {
+document.querySelector("#navimg8").innerHTML=""
+}
+</script>
+<!-- //<----------------------------------------------------------------makeup-------------------------->
+<script>
+    var marr=[
+ {
+     image:"https://cdn2.stylecraze.com/wp-content/uploads/2013/10/1731_15-Best-Bridal-Makeup-Artists-In-Delhi_Ss-267x300.jpg.webp",
+     para:"15 Best Bridal Makeup Artists In Delhi",
+     para1:"Bride Makeup",
+ },
+ {
+     image:"https://cdn2.stylecraze.com/wp-content/uploads/2014/03/41-Top-5-Keya-Seth%E2%80%99s-Bridal-Makeup-Packages-267x300.jpg.webp",
+     para:"Top 5 Keya Seth’s Bridal Makeup Packages",
+     para1:"Celebrity Makeup"
+ },
+ {
+     image:"https://cdn2.stylecraze.com/wp-content/uploads/2013/02/8-Things-To-Consider-For-Your-Bridal-Makeup-Package-1-267x300.jpg.webp",
+     para:"8 Things To Consider For Your Bridal Makeup Package",
+     para1:"Eye Makeup",
+ },{
+     image:"https://cdn2.stylecraze.com/wp-content/uploads/2014/12/1150-60-Best-Indian-Bridal-Makeup-Tips-267x300.jpg.webp",
+     para:"60 Best Indian Bridal Makeup Tips",
+     para1:"Face Makeup",
+ },
+ {
+     image:"https://cdn2.stylecraze.com/wp-content/uploads/2013/03/290-100-Most-Beautiful-Indian-Bridal-Looks-277960493-267x300.jpg.webp",
+     para:"100 Most Beautiful Indian Bridal Looks",
+     para1:"Lips MAKEUP",
+ },
+ {
+     image:"https://cdn2.stylecraze.com/wp-content/uploads/2014/01/46-Top-5-VLCC-Bridal-Makeup-Packages-ss-267x300.jpg.webp",
+     para:"Top 5 VLCC Bridal Makeup Packages",
+     para1:"Makeup Idea",
+ }
+ ]
+
+document.querySelector("#makeup8").addEventListener("mouseenter",display)
+var data =JSON.parse(localStorage.getItem("data"))||[]
+function display(event){
+document.querySelector("#navimg8").innerHTML=""
+event.preventDefault();
+marr.map(function(ele){
+var maindiv=document.createElement("div");
+
+    maindiv.setAttribute("class","displaynavmain")
+    maindiv.style.backgroundColor='white';
+    var div=document.createElement("div");
+    div.setAttribute("class","displaynav")
+    var p1=document.createElement("p")
+    p1.innerText=ele.para1;
+    var img=document.createElement("img")
+    img.setAttribute("src",ele.image)
+    img.setAttribute("class","image8")
+    var p=document.createElement("p")
+    p.innerText=ele.para;
+    div.append(p1,img,p)
+    maindiv.append(div)
+    document.querySelector("#navimg8").append(maindiv)
+    localStorage.setItem("data",JSON.stringify(data))
+})
+}
+document.querySelector("#makeup8").addEventListener("mouseout",displayout)
+function displayout() {
+document.querySelector("#navimg8").innerHTML=""
+}
+
+</script>
+<!-- <--------------------------------------------------haircare---------------------------------------->
+<script>
+    var harr=[
+ {
+     image:"https://cdn2.stylecraze.com/wp-content/uploads/2013/10/What-Is-The-Truth-About-Hair-Oils-For-Dandruff-267x300.jpg.webp",
+     para:"Hair Oils For Dandruff",
+     para1:"Basic Hair care",
+ },
+ {
+     image:"https://cdn2.stylecraze.com/wp-content/uploads/2012/11/1569_How-To-Use-Lemon-To-Get-Rid-Of-Dandruff-267x300.jpg.webp",
+     para:"How To Use Lemon To Get Rid Of Dandruff?",
+     para1:"Dandruf Hair care"
+ },
+ {
+     image:"https://cdn2.stylecraze.com/wp-content/uploads/2013/01/10-Simple-Treatments-For-Dandruff-On-Eye-Lashes-And-Eyebrows-267x300.jpg.webp",
+     para:"Top 11 Natural Shampoos Available In India – Reviews And Guide",
+     para1:"Color hair care",
+ },{
+     image:"https://cdn2.stylecraze.com/wp-content/uploads/2021/06/Top-11-Natural-Shampoos-Available-In-India--Reviews-And-Guide-267x300.jpg.webp",
+     para:"Wet Dandruff – What Is It And How To Treat It?",
+     para1:"CelebrityHair care",
+ },
+ {
+     image:"https://cdn2.stylecraze.com/wp-content/uploads/2013/11/Wet-Dandruff-%E2%80%93-What-Is-It-And-How-To-Treat-It-267x300.jpg.webp",
+     para:"Garlic For Dandruff – How To Use, Benefits, Risks",
+     para1:"My Hair care",
+ },
+ {
+     image:"https://cdn2.stylecraze.com/wp-content/uploads/2013/09/Garlic-For-Dandruff--How-To-Use-Benefits-Risks-Banner-267x300.jpg.webp",
+     para:"Top 5 VLCC Bridal Dandruf Packages",
+     para1:"Bride Hair care",
+ }
+ ]
+     
+document.querySelector("#haircare8").addEventListener("mouseenter",display)
+var data =JSON.parse(localStorage.getItem("data"))||[]
+function display(event){
+document.querySelector("#navimg8").innerHTML=""
+event.preventDefault();
+harr.map(function(ele){
+var maindiv=document.createElement("div");
+
+    maindiv.setAttribute("class","displaynavmain")
+    maindiv.style.backgroundColor='white';
+    var div=document.createElement("div");
+    div.setAttribute("class","displaynav")
+    var p1=document.createElement("p")
+    p1.innerText=ele.para1;
+    var img=document.createElement("img")
+    img.setAttribute("src",ele.image)
+    img.setAttribute("class","image8")
+    var p=document.createElement("p")
+    p.innerText=ele.para;
+    div.append(p1,img,p)
+    maindiv.append(div)
+    document.querySelector("#navimg8").append(maindiv)
+    localStorage.setItem("data",JSON.stringify(data))
+})
+}
+document.querySelector("#haircare8").addEventListener("mouseout",displayout)
+function displayout() {
+document.querySelector("#navimg8").innerHTML=""
+}
+
+</script>
+<script>
+ var sarr=[
+ {
+     image:"https://cdn2.stylecraze.com/wp-content/uploads/2020/11/1-1.jpg",
+     para:" KLF Nirmal VCO Soap",
+     para1:"My Skin Care",
+ },
+ {
+     image:"https://cdn2.stylecraze.com/wp-content/uploads/2013/12/10-Simple-Homemade-Moisturizers-For-Dry-Skin-267x300.jpg.webp",
+     para:" 10 Simple Homemade Moisturizers For Dry Skin",
+     para1:"Acne"
+ },
+ {
+     image:"https://cdn2.stylecraze.com/wp-content/uploads/2013/09/How-To-Use-Multani-Mitti-For-Dry-Skin-1-267x300.jpg.webp",
+     para:"How To Use Multani Mitti For Dry Skin",
+     para1:"Arranging",
+ },{
+     image:"https://cdn2.stylecraze.com/wp-content/uploads/2013/01/Must-Try-Night-Creams-For-Dry-Skin-267x300.jpg.webp",
+     para:"Top 12 Must-Try Night Creams For Dry Skin – 2021",
+     para1:"cheek Skin care",
+ },
+ {
+     image:"https://cdn2.stylecraze.com/wp-content/uploads/2013/11/15-Best-Skin-Care-Products-For-Dry-Skin-%E2%80%93-Our-Top-Picks-For-2019-267x300.jpg.webp",
+     para:" 15 Best Skin Care Products For Dry Skin – Our Top Picks of 2021",
+     para1:"Lips Skin Care",
+ },
+ {
+     image:"https://cdn2.stylecraze.com/wp-content/uploads/2012/06/How-To-Remove-Dead-Skin-From-Feet-Banner-267x300.jpg.webp",
+     para:"16 Best Ways To Use Honey For Dry Skin",
+     para1:"oily Skin Care",
+ }
+ ]
+document.querySelector("#skincare8").addEventListener("mouseenter",display)
+var data =JSON.parse(localStorage.getItem("data"))||[]
+function display(event){
+document.querySelector("#navimg8").innerHTML=""
+event.preventDefault();
+sarr.map(function(ele){
+var maindiv=document.createElement("div");
+
+maindiv.setAttribute("class","displaynavmain")
+maindiv.style.backgroundColor='white';
+var div=document.createElement("div");
+div.setAttribute("class","displaynav")
+var p1=document.createElement("p")
+p1.innerText=ele.para1;
+var img=document.createElement("img")
+img.setAttribute("src",ele.image)
+img.setAttribute("class","image8")
+var p=document.createElement("p")
+p.innerText=ele.para;
+div.append(p1,img,p)
+maindiv.append(div)
+document.querySelector("#navimg8").append(maindiv)
+localStorage.setItem("data",JSON.stringify(data))
+})
+}
+document.querySelector("#skincare8").addEventListener("mouseout",displayout)
+function displayout() {
+document.querySelector("#navimg8").innerHTML=""
+}
+</script>
+<!-- ------------------heath-------------- -->
+<script>
+    var healarr=[
+ {
+     image:"https://cdn2.stylecraze.com/wp-content/uploads/2019/01/Natural-Treatments-To-Manage-The-Symptoms-Of-Shingles-Causes-Symptoms-And-Prevention-Tips-267x300.jpg.webp ",
+     para:" 6 Home Remedies For Shingles – Causes, Symptoms, And Prevention Tips ",
+     para1:"Fitness",
+ },
+ {
+     image:"https://cdn2.stylecraze.com/wp-content/uploads/2019/02/How-To-Deal-With-Paranoid-Personality-Disorder-267x300.jpg.webp ",
+     para:" How To Deal With Paranoid Personality Disorder ",
+     para1:"Helth Device"
+ },
+ {
+     image:"https://cdn2.stylecraze.com/wp-content/uploads/2020/03/Debunking-Myths-About-Coronavirus-267x300.jpg.webp ",
+     para:"17 Myths About Coronavirus Debunked",
+     para1:"Ayurveda",
+ },{
+     image:"https://cdn2.stylecraze.com/wp-content/uploads/2019/04/Uvula-Swollen-And-Red-267x300.jpg.webp ",
+     para:"Why Is My Uvula Swollen And Red? 8 Natural Remedies To Manage Uvulitis ",
+     para1:"Diet Tips",
+ },
+ {
+     image:"https://cdn2.stylecraze.com/wp-content/uploads/2018/11/Diverticulitis-Symptoms-Causes-And-Treatment-Diet-267x300.jpg.webp ",
+     para:" Diverticulitis – Symptoms, Causes, And Treatment + Diet",
+     para1:"Healthy Food",
+ },
+ {
+     image:" https://cdn2.stylecraze.com/wp-content/uploads/2020/03/Coronavirus-Disease-COVID-19-Symptoms-Prevention-And-Treatment-267x300.jpg.webp",
+     para:"Coronavirus Disease (COVID-19): Symptoms, Prevention, And Treatment ",
+     para1:"Neurtation",
+ }
+ ]
+document.querySelector("#health8").addEventListener("mouseenter",display)
+var data =JSON.parse(localStorage.getItem("data"))||[]
+function display(event){
+document.querySelector("#navimg8").innerHTML=""
+event.preventDefault();
+healarr.map(function(ele){
+var maindiv=document.createElement("div");
+
+maindiv.setAttribute("class","displaynavmain")
+maindiv.style.backgroundColor='white';
+var div=document.createElement("div");
+div.setAttribute("class","displaynav")
+var p1=document.createElement("p")
+p1.innerText=ele.para1;
+var img=document.createElement("img")
+img.setAttribute("src",ele.image)
+img.setAttribute("class","image8")
+var p=document.createElement("p")
+p.innerText=ele.para;
+div.append(p1,img,p)
+maindiv.append(div)
+document.querySelector("#navimg8").append(maindiv)
+localStorage.setItem("data",JSON.stringify(data))
+})
+}
+document.querySelector("#heathe8").addEventListener("mouseout",displayout)
+function displayout() {
+document.querySelector("#navimg8").innerHTML=""
+}
+</script>
+
+
+<!-- --------------------------------------------------news------------------------------------- -->
+
+
+<script>
+    var narr=[
+ {
+     image:"https://cdn2.stylecraze.com/wp-content/uploads/2019/08/What-Your-Zodiac-Sign-Says-About-Your-Style-267x300.jpg.webp ",
+     para:"What Your Zodiac Sign Says About Your Style  ",
+     para1:"Sangam News",
+ },
+ {
+     image:"https://cdn2.stylecraze.com/wp-content/uploads/2021/11/Easy-And-Simple-Ways-To-Wear-A-Bucket-Hat-banner-267x300.jpg.webp ",
+     para:" Easy And Simple Ways To Wear A Bucket Hat ",
+     para1:"Rajendra News"
+ },
+ {
+     image:"https://cdn2.stylecraze.com/wp-content/uploads/2019/09/How-To-Pick-Sunglasses-That-Suit-Your-Face-Shape--A-Guide-267x300.jpg.webp ",
+     para:" How To Pick Sunglasses That Suit Your Face Shape – A Guide",
+     para1:"Rajat News",
+ },{
+     image:"https://cdn2.stylecraze.com/wp-content/uploads/2019/04/17-Shirts-That-Go-Well-With-Leggings-267x300.jpg.webp ",
+     para:" 17 Shirts That Go Well With Leggings",
+     para1:"Aaditya News",
+ },
+ {
+     image:"https://cdn2.stylecraze.com/wp-content/uploads/2021/11/15-Best-Belt-Bags-For-Women-267x300.jpg.webp ",
+     para:" 15 Best Belt Bags And Fanny Packs For Women For Hands-Free Travel",
+     para1:"Govind News",
+ },
+ {
+     image:"https://cdn2.stylecraze.com/wp-content/uploads/2013/02/726-Top-41-Bollywood-Actresses-Who-Look-Beautiful-In-Saree-267x300.jpg.webp",
+     para:"How To Rock A Beanie On Any Hair ",
+     para1:"Sambit News",
+ }
+ ]
+document.querySelector("#new8").addEventListener("mouseenter",display)
+var data =JSON.parse(localStorage.getItem("data"))||[]
+function display(event){
+document.querySelector("#navimg8").innerHTML=""
+event.preventDefault();
+narr.map(function(ele){
+var maindiv=document.createElement("div");
+
+maindiv.setAttribute("class","displaynavmain")
+maindiv.style.backgroundColor='white';
+var div=document.createElement("div");
+div.setAttribute("class","displaynav")
+var p1=document.createElement("p")
+p1.innerText=ele.para1;
+var img=document.createElement("img")
+img.setAttribute("src",ele.image)
+img.setAttribute("class","image8")
+var p=document.createElement("p")
+p.innerText=ele.para;
+div.append(p1,img,p)
+maindiv.append(div)
+document.querySelector("#navimg8").append(maindiv)
+localStorage.setItem("data",JSON.stringify(data))
+})
+}
+document.querySelector("#new8").addEventListener("mouseout",displayout)
+function displayout() {
+document.querySelector("#navimg8").innerHTML=""
+}
+</script>
+
+<!-- -----------------------------------------ABOUTS------------------------------------------- -->
+
+
+<script>
+document.querySelector("#about8").addEventListener("mouseenter",display)
+var data =JSON.parse(localStorage.getItem("data"))||[]
+function display(event){
+document.querySelector("#about").innerHTML=""
+event.preventDefault();
+var div=document.createElement("div");
+div.setAttribute("class", "divabt")
+var p1=document.createElement("p")
+p1.style.marginTop="10px";
+p1.innerText="Our Team"
+var p2=document.createElement("p")
+p2.innerText="Editorial Policy"
+var p3=document.createElement("p")
+p3.innerText="Medical Review Board"
+var p4=document.createElement("p")
+p4.innerText="Expert Panel"
+var p5=document.createElement("p")
+p5.innerText="Contact Us"
+div.append(p1,p2,p3,p4,p5)
+document.querySelector("#about").append(div)
+localStorage.setItem("data",JSON.stringify(data))
+}
+document.querySelector("#about").addEventListener("mouseout",displayout)
+function displayout() {
+document.querySelector("#about").innerHTML=""
+}
+
+</script>
+
+    <div id="one">
+        <div id="two">
+            <h1>HEALTH AND WELLNESS</h1>
+            <hr>
+        </div>
+        <div>
+            
+                <div class="three" id="divFirst" >
+                    <a>Health Conditions And Diseases</a>
+                </div>
+                <div class="three" >
+                    <a >Ayurveda</a>
+                </div>
+                <div class="three">
+                    <a>Weight Gain</a>
+                </div>
+                <div class="three">
+                    <a>Nutrition</a>
+                </div>
+                <div class="three">
+                    <a>Healthy Food</a>
+                </div>
+                <div class="three">
+                    <a>Diet Tips</a>
+                </div>
+                <div class="three">
+                    <a>Yoga</a>
+                </div>
+                <div class="three">
+                    <a>Weight Loss</a>
+                </div>
+                <div class="three">
+                    <a>Home Remedies</a>
+                </div>
+                <div class="three">
+                    <a>Ingredients</a>
+                </div>
+            
+        </div>
+        <div>
+            <div>
+                <img style="height:100%;" src="https://cdn2.stylecraze.com/wp-content/uploads/2021/09/The-8-Best-And-Effective-Diets-According-To-Experts.jpg.webp">
+            </div>
+            <div>
+                <div id="four">
+                    <h2>The 8 Best And Effective Diets,</h2>
+                    <h2>According To Experts</h2>
+                    <h3>The best and effective diets help you lose weigth without compromising 
+                        your health. Also, these diets are easy to adhere to and 
+                        do not make you feel hungry all the time. So, you can
+                         suxtain the deit without falling back[...]
+                    </h3>
+                </div>
+                <div>
+                    <h4>BY CHARUSHILA BISWAS</h4>
+                </div>
+            </div>
+            
+        </div>
+        <div id="five">
+            <div>
+                <img src="https://cdn2.stylecraze.com/wp-content/uploads/2015/01/179-10-yoga-exercises-for-slimming-your-face_232471243.jpg.webp">
+                <h2 style="text-align:center;">12 Yoga Exercises For Slimming</h2>
+                <h2 style="text-align:center;">Your Face</h2>
+                <br>
+                <b >REVIEWED BY ANIRUDH GUPTA,CERTIFIED YOGA INSTRUCTOR,CERTIFIED YOGA INSTRUCTOR</b>
+            </div>
+            <div>
+                <img src="https://cdn2.stylecraze.com/wp-content/uploads/2022/02/Tone-Your-Body-With-The-15-Best-Dumbbell-Workouts-For-Women.jpg.webp">
+                <h2 style="text-align:center;">Tone Your Body With The 15 Best </h2>
+                <h2 style="text-align:center;">Dumbbell Workouts For Women</h2>
+                <br>
+                <b>BY CHARUSHILA BISWAS</b>
+                
+            </div>
+            <div>
+                <img src="https://cdn2.stylecraze.com/wp-content/uploads/2014/09/11-Amazing-Benefits-Of-The-Banana-And-Milk-Diet.jpg.webp">
+                <h2 style="text-align:center;">11 Amazing Binefits of The </h2>
+                <h2 style="text-align:center;">Banana And Milk </h2>
+                <br>
+                <b >MEDICALLY REVIEWED BY NEELANJANA SINGH , NUTRITION THERAPIST & WELLNESS CONSULTANT, RD, NUTRITION THERAPIST & WELLNESS CONSULTANT
+                </b>
+            </div>
+        </div>
+        <div id="six">
+            <div>
+                <h1>The Rice Diet-How It WOrks, What To</h1>
+                <h1>Eat,And Benefits</h1>
+                <h3>Rice can lower high body fat and high blood pressure. Yes,you </h3>
+                <h3>heard that right! In fact ,a rice diet can also reduce</h3>
+                <h3>hypertension.Moreover,it may reduce the risk of heart disease</h3>
+                <h3>and diabetes.Kitty Gurkin Rosati(MS,RD,[...]</h3>
+                
+                    <h4>REVIEWED BY ALEXANDRA DUSENBERRY,MS,RDN(REGISTERED</h4>
+                <h4> DIETITIAN NUTRITIONIST),REGISTERED DIETITIAN NUTRITION</h4>
+            
+            </div>
+            <div>
+                <img src="https://cdn2.stylecraze.com/wp-content/uploads/2019/01/Rice-Diet-720x810.jpg.webp">
+            </div>
+            
+        </div>
+        <div id="seven">
+            <div>
+                <img src="https://cdn2.stylecraze.com/wp-content/uploads/2013/11/Pineapple-Diet-Lose-5-Kilos-In-5-Days.jpg.webp">
+                <h3 style="text-align:center;">Pineapple Diet-Lose 5 Kilos In 5</h3>
+                <h3 style="text-align:center;">Days</h3>
+                <h5>REVIEWED BY MADHU SHARMA , REGISTERED DIETITIAN, RD, REGISTERED DIETITIAN</h5>
+            </div>
+            <div>
+                <img src="https://cdn2.stylecraze.com/wp-content/uploads/2021/09/Getting-Started-With-Vegan-Diabetes-Diet-Foods-Menu-And-Benefits.jpg.webp">
+                <h3 style="text-align:center;">Getting Started With Vegan</h3>
+                <h3 style="text-align:center;">Diabetes diet : Foods , Menu , And </h3>
+                <h5>BY CHARUSHILA BISWAS</h5>
+            
+            </div>
+            <div>
+                <img src="https://cdn2.stylecraze.com/wp-content/uploads/2014/07/15-Arm-Workouts-Without-Weights-To-Lose-Arm-Fat-Fast-At-Home.jpg.webp">
+                <h3 style="text-align:center;">15 Arm Workouts Without Weights</h3>
+                <h3 style="text-align:center;">To Lose Arm Fat Fast At Home</h3>
+                <h5>MEDICALLY REVIEWED BY DR.SUDHANSU SINGH,BPT,PHYSIOTHERAPOST,PHYSIOTHERAPIST </h5>
+
+            </div>
+        </div>
+        <div>
+            <div>
+                <img src="https://cdn2.stylecraze.com/wp-content/uploads/2013/01/GM-Diet--Is-It-The-Best-Plan-For-Weight-Loss-In-7-Days.jpg.webp">
+                <h3 style="text-align:center;">GM Diet-7 Day Chart,</h3>
+                <h3 style="text-align:center;">Foods List,Benefits & Risks</h3>
+                <h5>REVIEWED BY MERLIN ANNIE RAJ , MSC (NUTRITION & DIETETICS), RD, REGISTERED DIETITIAN</h5>
+            </div>
+            <div>
+                <img src="https://cdn2.stylecraze.com/wp-content/uploads/2020/04/Christina-Aguilera-Banner.jpg.webp">
+                <h3 style="text-align:center;">Revealed! How Christina Aguilera</h3>
+                <h3 style="text-align:center;">Lost 40 Pounds</h3>
+                <h5>BY CHARUSHILA BISWAS</h5>
+            
+            </div>
+            <div>
+                <img src="https://cdn2.stylecraze.com/wp-content/uploads/2019/01/Natural-Ways-To-Heal-A-Jammed-Finger-%E2%80%93-Causes-And-Symptoms.jpg.webp">
+                <h3 style="text-align:center;">5 Natural Ways To HEal A </h3>
+                <h3 style="text-align:center;">Jammed Finger + Causes And</h3>
+                <h5>BY SHAHEEN NASER</h5>
+
+            </div>
+        </div>
+        <div></div>
+    </div>    
+    <div id="eight">
+        <div>
+           <div>
+                    <div>
+                            <b>About Us</b>
+                            <br><br>
+                            <b>Image Usage Policy</b>
+                            <br><br>
+                            <b>Contact Us</b>
+                            <br><br>
+                            <b>Editorial Guidelines</b>
+                            <br><br>
+                            <b>Join Our Medical Board</b>
+                            <br><br>
+                            <b>Press Room</b>
+                        
+                    </div>
+                    <div>
+                        <div>
+                            <b>Advertise With Us</b>
+                            <br><br>
+                            <b>Privacy Policy</b>
+                            <br><br>
+                            <b>Terms Of Use</b>
+                            <br><br>
+                            <b>Affiliate Disclosure</b>
+                            <br><br>
+                            <b>Cookie Policy</b>
+                            <br><br>
+                            <b>Manage subscription</b>
+                        
+                    </div>
+                    </div>
+            </div>
+            <div>
+                <div id="nine">
+                    <h2 STYLE="text-align:center;">FOLLOW US</h2>
+                    <i class="fa-brands fa-facebook-square fa-2x"></i>
+                    <i class="fa-brands fa-pinterest-square fa-2x"></i>
+                    <i class="fa-brands fa-twitter-square fa-2x"></i>
+                    <i class="fa-brands fa-instagram fa-2x"></i>
+                    <i class="fa-brands fa-youtube-square fa-2x"></i>
+                </div>
+                <div>
+                    <h2 style="margin-left:50px;">Our Sister Sites</h2>
+                    <h3 class="classFirst">MomJunction</h3>
+                    <h3 class="classFirst">The BridalBox</h3>
+                    <h3 class="classFirst">Skinkaraft</h3>
+                    <h3 class="classFirst">Vedix</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="Health.js"></script>

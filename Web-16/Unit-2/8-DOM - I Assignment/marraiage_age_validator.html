@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="GenderTag">
+        <option value="male">Male</option>
+        <option value="Female">Female</option>
+    </select>
+    <input id="YearTag" type="number" placeholder="Birth Year" value=""/>
+   <button id="ButtonTag" onclick="hitme()">Submit</button> 
+</body>
+</html>
+
+<script>
+    function hitme() {
+        var Gender = document.getElementById("GenderTag").value;
+        var BirthYear = document.getElementById("YearTag").value;
+        if(Gender == "male"){
+            if(2022 - BirthYear >= 21){
+                alert("eligible")
+            }else {
+                alert("Not eligibe")
+            }
+        } 
+        if(Gender == "Female"){
+            if(2022 - BirthYear >= 18){
+                alert("eligible")
+            }else {
+                alert("Not eligibe")
+            }
+        } 
+    }
+</script>

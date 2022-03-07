@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- inputtag -->
+    <input id="firstname" type="text" placeholder="first name" value=""/>
+    <input id="lastname" type="text" placeholder="last name" value=""/>
+    <input id="age" type="number" placeholder="age" value=""/>
+    <!-- type can be number as well according to your project -->
+
+    <!-- select tag -->
+    <select id="Selectgender">
+        <option value="male">Male</option>
+        <option value="Female">Female</option>
+        </select>
+
+
+        <button id="buttonTag" onClick="input()">Submit</button>
+        <!-- button use for action -->
+        <!-- put it anywhere -->
+        <h1 id="getit">Show the output</h1>
+</body>
+</html>
+
+<script>
+    // input,select/options
+    
+// button function so it will work by button which named as submit
+function input() {
+    // console.log(document.getElementById("firstname").value);
+    // console.log(document.getElementById("lastname").value);
+    
+    var fname= document.getElementById("firstname").value;
+    var lname= document.getElementById("lastname").value
+    var age = document.getElementById("age").value
+    var gender = document.getElementById("Selectgender").value
+
+    document.getElementById("getit").innerText = fname+ " " + lname + " " + age + " "+ gender
+}
+</script>

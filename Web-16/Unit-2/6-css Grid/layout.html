@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    <style>
+        #main1{
+            display: grid;
+            grid-template-columns: repeat(5,50px);
+            grid-template-rows: 50px 50px;
+            gap: 7px;
+            grid-template-areas: 
+            "A A B E"
+            "C D B E";
+        }
+        .box{
+            background-color: rgb(23, 82, 87);
+            border-radius: 3px;
+            gap: 7px;
+            padding: 3px;
+
+
+        }
+        .box1{
+            grid-area: A;
+        }
+        .box2{
+            grid-area: B;
+        }
+        .box3{
+            grid-area: C;
+        }
+        .box4{
+            grid-area: D;
+        }
+        .box5{
+            grid-area: E;
+        }
+
+        #main2{
+            display: grid;
+            /* background-color: black; */
+            grid-template-columns: repeat(4, 70px);
+            grid-template-rows: repeat(3,50px);
+            gap: 7px;
+            padding-top: 40px;
+            grid-template-areas:
+            "F F G G"
+            "H I I I"
+            "J J J J";
+        }
+        #main2 > .box{
+            background-color:rgb(23, 82, 87);
+            padding: 3px;
+        }
+        .box9{
+            grid-area: F;
+        }
+        .box10{
+            grid-area: G;
+        }
+        .box11{
+            grid-area: H;
+        }
+        .box12{
+            grid-area: I;
+        }
+        .box13{
+            grid-area: J;
+        }
+    </style>
+</head>
+<body>
+    <!-- parent 1 -->
+    <div id="main1">
+        <div class="box box1">A</div>
+        <div class="box box2">B</div>
+        <div class="box box3">C</div>
+        <div class="box box4">D</div>
+        <div class="box box5">E</div>
+    </div>
+
+    <!-- parent 2 -->
+    <div id="main2">
+        <div class="box box9">A</div>
+        <div class="box box10">B</div>
+        <div class="box box11">C</div>
+        <div class="box box12">D</div>
+        <div class="box box13">E</div>
+    </div>
+</body>
+</html>

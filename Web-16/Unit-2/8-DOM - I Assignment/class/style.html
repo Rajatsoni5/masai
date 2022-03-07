@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS styling  -->
+    <!-- <style>
+        #h1tag{
+            background-color: aqua;
+        }
+    </style> -->
+</head>
+<body id="bodyTag">
+    
+    <h1 id="h1tag"> i am h1 tag</h1>
+
+    <button id="buttontag" onclick="change()">Dark mode</button>
+</body>
+</html>
+<!-- Js start -->
+<!-- js styling -->
+<script>
+    document.getElementById('h1tag').style.backgroundColor="green"
+    document.getElementById('h1tag').style.color="yellow"
+    document.getElementById('h1tag').style.fontSize="12px";
+
+    function change() {
+        document.getElementById("bodyTag").style.backgroundColor = "black";
+        document.getElementById('h1tag').style.backgroundColor="white";
+        document.getElementById('buttontag').style.backgroundColor="red";
+        document.getElementById('h1tag').style.color ="red";
+    }
+    // call the function change to change body color to lack
+</script>
