@@ -1,5 +1,9 @@
+// Js can access and change all the elements of an HTML
+
 // console.log(document.getElementById("heading"));
 
-var heading = document.getElementById("heading");
+// you can change the value by below method
 
-heading.innerHTML = "Java"
+// var heading = document.getElementById("heading");
+
+// heading.innerHTML = "Java";
