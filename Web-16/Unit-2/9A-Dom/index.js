@@ -1,5 +1,5 @@
-console.log("welcome to index");
-let a = document;
-a = document.all;
-a = document.forms;
-console.log(a)
+// console.log(document.getElementById("heading"));
+
+var heading = document.getElementById("heading");
+
+heading.innerHTML = "Java"
