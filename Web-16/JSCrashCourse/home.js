@@ -103,4 +103,108 @@ let nothing = null; //value null
 
 // *************************** strings(common method)
 
-let fruit = 'Apple';
+// let fruit = 'Apple';
+// let  morefruits = 'banana/kiwi';
+
+// console.log(fruit.length)
+// console.log(fruit.indexOf('e')) //this will get the location
+// console.log(fruit.indexOf('g')) //as "g " is not in  fruit so it'll give -1
+// console.log(fruit.slice(2,4)) // it will give the value from 2-4
+// console.log(fruit.replace('A', '24')) //replacement
+// console.log(fruit.toUpperCase()) //can do it to lowercase as well
+// console.log(fruit[1]) //check what's there at 1/2/3/4/5
+
+// console.log(fruit.split('')) // split by character
+// console.log(fruit.split(',')) //split by comma and give value in array
+
+
+// **************************** Array
+
+/*
+let fruits = ['banana', 'apple', 'kiwi', 'orange'];
+
+fruits = new Array('banana', 'apple', 'kiwi', 'orange');
+
+console.log(fruits[2]) //access the value by index 0/1/2/3/4
+
+fruits[0] = 'pear' //value changed
+console.log(fruits)
+
+for(let i=0; i<fruits.length; i++){
+    console.log(fruits[i])
+}
+*/
+
+//****************** Array common Method
+/*
+console.log('to string', fruits.toString()) //change the array to string
+console.log(fruits.join(' - ')) //"-" added between the fruits
+console.log(fruits.pop(), fruits) // deleted the last value
+console.log(fruits.push("newfruit"), fruits) //added to the existing array
+
+fruits[fruits.length] = 'extraone' //same as push
+console.log(fruits);
+
+fruits.shift(); //remove the first element
+console.log(fruits)
+
+fruits.unshift('ok'); //add to first place
+console.log(fruits)
+
+let veggie = ['tomato', 'patato', 'brocoli'];
+let allgro = fruits.concat(veggie); //combine array
+console.log(allgro)
+console.log(allgro.slice(2,6))
+
+console.log(allgro.reverse()) //it will reverse the complete array
+console.log(allgro.sort())
+
+
+let number = [1,2,4,45,6,7,33,8,9];
+console.log(number.sort(function(a,b){ return a-b})) //sort in accending
+console.log(number.sort(function(a,b){ return b-a})) // sort in decending
+
+let emptyarr = new Array();
+for(let num=0; num<=10; num++){
+    emptyarr.push(num);
+}
+console.log(emptyarr)
+*/
+
+
+
+//************************Object in JS
+/*
+let student = {
+    first: 'rajat',
+    last: 'soni',
+    age: 21,
+    height: 173,
+
+    studentInfo: function (){
+        return this.first + '\n' + this.last + '\n' + this.age;
+    }
+}
+console.log(student.first);
+student.first = 'NameChanged' //change the value
+console.log(student.first)
+student.age++; //Increment(you can decrement by age--)
+console.log(student.age)
+
+console.log(student.studentInfo())
+*/
+
+// ********************************if/else condition / control flows
+// && AND
+// || OR
+
+// var age = prompt('what is your age?')
+// if(age >=18 && age <=35){
+    // status = 'target demo'
+// } else {
+    // status = 'Not my audience'
+// }
+
+
+// *********************************** JSON
+// refer to new sheet
