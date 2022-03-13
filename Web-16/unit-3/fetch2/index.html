@@ -8,7 +8,7 @@
 </head>
 <body>
     <input type="text" id="city">
-    <button onclick="getWeather">Get weather</button>
+    <button onclick="getWeather()">Get weather</button>
 
     <div id="container"></div>
 </body>
@@ -22,8 +22,10 @@
     async function getWeather() {
 
         try {
-            let city = document.getElementById("city")
+            let city = document.getElementById("city").value;
+
         let res = await fetch( `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=e4c70ce6a6821649a416cb9521d5f4f8&units=metric`
+        
         );
             let data = await res.json();
 
@@ -41,15 +43,15 @@
         name.innerText = data.name
 
         let temp = document.createElement("h3")
-        temp.innerText = data.main,temp
+        temp.innerText = data.main.temp
 
         let pressure = document.createElement("h3")
-        pressure.innerText = data.main,pressure
+        pressure.innerText = data.main.pressure
 
         let humidity = document.createElement("h3")
-        humidity.innerHTML = data.main,humidity
+        humidity.innerHTML = data.main.humidity
 
-        container.appendData(name, temp, pressure, humidity);
+        container.append(name, temp, pressure, humidity);
     }
 
 </script>
