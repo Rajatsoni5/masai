@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>youtube</h1>
+    <h1>Youtube</h1>
 
     <input type="text" id="search">
 
@@ -28,6 +28,25 @@
 // GET https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=football&key=[YOUR_API_KEY] HTTP/1.1
 
 //api key - AIzaSyD89hd_35X_COpV5IE8h18YHlihKmsy2G0
+
+
+const searchVideos = async ()=>{
+
+    try {
+        
+        let inp = document.getElementById("search").value
+
+        let res = await fetch(
+            `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${inp}&key=AIzaSyD89hd_35X_COpV5IE8h18YHlihKmsy2G0`
+        );
+
+        let data = await res.json()
+        console.log("data:", data)
+
+    } catch (error) {
+        
+    }
+}
 
 
 
