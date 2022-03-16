@@ -10,3 +10,60 @@
     <h1>ok</h1>
 </body>
 </html>
+
+<script>
+
+//cf -> objects
+// what it is for?
+
+//es6 classes -> object
+
+
+
+// function Person(n,a){
+
+//     this.name = n
+//     this.age = a
+//     this.showName = () => {
+//         console.log(this.name);
+//     };
+// }
+
+// const person = {
+
+//     name: 'msd',
+//     showName: () => {
+//         console.log(this.name);
+//     }
+
+// }
+
+// person.showName()
+
+
+
+
+// var p1 = new Person('MSD', 23);
+
+// console.log("p1:", p1)
+// p1.showName();
+
+
+class Person{
+
+    constructor(n,a){
+        this.name = n
+        this.age = a
+    }
+
+    showName() {
+        console.log(this.name)
+    }
+}
+
+var p1 = new Person('MSD', 23);
+console.log("p1:", p1)
+p1.showName();
+
+
+</script>
