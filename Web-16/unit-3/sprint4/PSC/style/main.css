@@ -1,0 +1,59 @@
+body {
+    margin: 0px;
+  }
+  #header {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    color: white;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  #logo {
+    width: 5%;
+    text-align: right;
+  }
+  #logo img {
+    width: 30%;
+    border-radius: 80%;
+    padding: 9px;
+  }
+  #profile img {
+    border-radius: 80%;
+    width: 50%;
+    height: 35px;
+    padding-top: 7%;
+  }
+  #search {
+    width: 10%;
+    padding: 12px;
+  }
+  ul {
+    padding-left: 0px;
+  }
+  
+  #list li {
+    display: inline;
+    margin-right: 2%;
+  }
+  #options {
+    width: 75%;
+  }
+  #profile {
+    width: 5%;
+  }
+  
+  
+  #main{
+  
+  
+  padding: 3%;
+  }
+  
+  
+  
+  
+  
+  
