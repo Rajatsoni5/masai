@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div>
+      <h3 id="wallet">
+        <!--SHOW CURRENT WALLET VALUE HERE, ONLY THE NUMBER SHOULD BE VISIBLE-->
+      </h3>
+    </div>
+
+    <div id="main">
+      <!--SHOW ALL THE VOUCEHRS DATA FROM API HERE( IMAGE, NAME AND PRICE)-->
+    </div>
+  </body>
+</html>
+
+<script type="module">
+  //WRITE YOUR LOGIC HERE
+
+  // voucher data fetch
+  let show_data = document.getElementById("main");
+
+  async function voucher() {
+   
+    try {
+      
+      let result = await fetch(`https://masai-vouchers-api.herokuapp.com/api/vouchers`)
+      .then((result)=> result.json())
+      .then((result)=> result);
+
+      console.log("result", result)
+
+      for(var i=0; i<result[0].vouchers.length; i++){
+
+        let name = document.createElement("h4")
+        name.innerHTML = result[0].vouchers[i].name
+
+        let image = document.createElement("img")
+        image.src = result[0].vouchers[i].image
+
+        let price = document.createElement("p")
+        price.innerHTML = "Rs " +  result[0].vouchers[i].price
+
+        let button = document.createElement("button")
+        button.innerText = "Buy"
+        button.id = "buy" 
+
+        let div = document.createElement("div")
+        div.className = "Voucher_details"
+        
+
+        div.append(name,image, price, button)
+        show_data.append(div)
+
+      }
+
+    } catch (error) {
+      
+    }
+  }
+  voucher();
+
+
+  // getting wallet balance
+  var amount = localStorage.getItem("wallet")
+  var wallet_value = document.getElementById("wallet")
+  wallet_value.innerHTML = amount
+
+
+//buy-balance deduct
+//  function buy() {
+
+//    var purchases = document.getElementById("Voucher_details")
+
+//    localStorage.setItem("purchases", purchases)
+//  }
+</script>

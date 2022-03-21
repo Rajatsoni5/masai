@@ -6,9 +6,8 @@ function add() {
     window.location.href = "./index.html"
 }
 
-console.log(stock);
-
 for(var j=0; j<stock.length; j++){
+    
     const name1 = document.createElement("h4")
     name1.innerText = stock[j].name
 
