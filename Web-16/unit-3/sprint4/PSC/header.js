@@ -1,6 +1,9 @@
+console.log("hello")
+
+
 const header = () => {
 
-    return `    <div id="logo">	
+    return  `<div id="logo">	
 	
 	<a href='/'>
 	<img
