@@ -26,7 +26,24 @@ window.addEventListener("load", function() {
         }
 
         let payload = JSON.stringify(obj)
-        console.log(payload)
+        register(payload)
 
     })
 })
+
+const register = (data) => {
+
+    //we need to send the data to server (use post api method)
+
+    fetch("https://masai-api-mocker.herokuapp.com", {
+
+            method: "POST",
+            headers: {
+                'content-type' : 'application/json'
+            },
+            body : data
+    })
+    .then((res) => res.json())
+    .then((data) => console.log(data))
+    .then((err) => console.log(err))
+}

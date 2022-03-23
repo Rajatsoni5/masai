@@ -1,0 +1,24 @@
+> JS - is scripting language, used for creating dynamic web pages and adding functionality.
+
+> callback - passing a function as a argument and calling that function inside the function
+
+> clouser - a function inside a function
+
+> promise - promise is a way to handle async nature of JS.
+
+> different scope of JS?
+Global, local and functional/local
+
+> Rest API - Used to get  or transfer the data from server (repersantational state transfer)
+//URL to fetch and sent data
+
+> CRUD operation:
+ - GET //read
+ - PUT //update
+ - POST //create
+ - PATCH //update
+ - DELETE //deletling
+
+> fetch API - getting/Sending data using REST API to/from server
+
+> `json-server` - 
