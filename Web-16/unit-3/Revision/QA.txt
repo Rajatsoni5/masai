@@ -21,4 +21,26 @@ Global, local and functional/local
 
 > fetch API - getting/Sending data using REST API to/from server
 
-> `json-server` - 
+> `json-server` -  A tool to create a JSON database server
+
+#ES6
+
+> Import/Export
+    -reduce the code repetation and writing smaller and simpler code
+
+> diff var/let/const
+    -var (for Global and functional scope variable; 
+        re-assignmemnt;
+        support hoisitng)
+
+    -let (declaring block scope variable;
+        re-assignmemnt;
+        no support hoisitng)
+
+    -const (declaring block scope variable;
+            NO re-assignmemnt;
+            No support hoisitng)
+
+
+> Arrow function
+    - function sum(a+b){} == chnaged with = let sum = (a+b) => {}

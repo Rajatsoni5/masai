@@ -30,6 +30,7 @@ input_box.addEventListener("keypress", function(){
 
 });
 
+let img = document.getElementById("img")
 
 const getData = async (e) => {
 
@@ -42,6 +43,11 @@ const getData = async (e) => {
 
     let data = await res.json();
     console.log("data", data)
+
+
+    for (let i=0; i<data.length, i++){
+        img.src = data.i.owner.avatar_url
+    }
 }
     } catch (error) {
         
