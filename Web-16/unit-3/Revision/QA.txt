@@ -44,3 +44,7 @@ Global, local and functional/local
 
 > Arrow function
     - function sum(a+b){} == chnaged with = let sum = (a+b) => {}
+
+> Rest operators
+    -var a = [1,2,3,4,5]
+        var [first, second, ...rest] = a;  ==> 1,2, (3,4,5)
