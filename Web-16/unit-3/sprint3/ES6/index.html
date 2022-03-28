@@ -47,7 +47,7 @@ const searchVideos = async () => {
         let inp = document.getElementById("search").value;
 
         let res = await fetch(
-            `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${inp}&key=AIzaSyAXb4WnRThZhHa7cCDKNwLZCRiXwI9zVaU&maxResults=50`
+            `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${inp}&key=AIzaSyAXb4WnRThZhHa7cCDKNwLZCRiXwI9zVaU&maxResults=20`
         );
 
         let data = await res.json();
