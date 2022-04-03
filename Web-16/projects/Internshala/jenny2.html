@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>otp</title>
+    <link rel="stylesheet" href="../styles/otp.css">
+    <style>
+        div{
+    width: 650px;
+    margin: auto;
+    /* border: 1px solid red; */
+}
+.otp_box{
+    background-color: whitesmoke;
+    padding: 10px;
+    border: 1px solid dimgray;
+    display: flex;
+}
+p{
+    margin: 10px 0;
+}
+input{
+    margin: 10px 0;
+    height: 20px;
+}
+button{
+    height: 20px;
+    background-color: rgb(37, 211, 102);
+    color: white;
+    margin: 16px 0;
+}
+    </style>
+</head>
+<body>
+    <div>
+        <img src="https://dashboard.ccavenue.com/ImgStore/Images/154681_GtwSetlogo_1513854200901.png" alt="">
+        <div class="otp_box">
+        <div>
+            <p>Enter OTP</p>
+            <input type="password" id="otp_value"><br>
+            <button onclick="validate()">Verify OTP</button>
+        </div>
+        <div>
+            <img src="https://www.reson8.ae/assets/images/otp/otp-banner-image.png" alt="">
+        </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    const validate = () =>{
+    let value = document.getElementById('otp_value').value;
+    if(value==1234){
+        alert('Payment Success !')
+        window.location.href='./index.html'
+    }else{
+        alert('Wrong OTP !')
+        document.getElementById('otp_value').value=null
+    }
+}
+</script>

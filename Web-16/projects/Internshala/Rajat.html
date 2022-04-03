@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship|Summer Internships</title>
+    <!-- <link rel="stylesheet" href="internship.css"> -->
+    <link rel="stylesheet" href="./style/nav.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <!-- <link rel="stylesheet" href="./style/login.css"> -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+    <script
+      src="https://kit.fontawesome.com/6deb308963.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+        body{
+    background-color: rgb(241, 241, 247);
+}
+input{
+    width: 180px;
+    height: 30px;
+}
+.countR{
+    margin-left: 55%;
+    font-family: 'Inter var',sans-serif;
+    color: #484848;
+}
+#content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #484848;
+}
+.filtertopR{
+    display: flex;
+    flex-direction: column;
+    color: #484848;
+}
+.logo{
+    background: #FF8C00;
+    border-radius: 12px 0 0 12px;
+    color: #fff;
+    padding: 4px 23px;
+    height: 24px;
+    margin-left: 16px;
+    flex-shrink: 0;
+}
+#FilterR{
+    color: #484848;
+    margin-top: 2%;
+    padding-left: 2%;
+    background-color: white;
+    border-radius: 6px;
+    text-align:left;
+    height: 450px;
+    width: 250px;
+    position:fixed;
+    margin-right: 40%;
+
+}
+.FilterstartR{
+   
+    margin: 0px;
+}
+.KeywordR{
+    background-color: white;
+     /* margin-left: 20px; */
+}
+.KeywordformR{
+    color: #484848;
+    display: flex;
+    flex-direction:row;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+.containerR{
+    color: #484848;
+    background-color: white;
+    border-radius: 6px;
+    width: 600px;
+    height: 250px;
+    margin-bottom: 15px;
+    padding-left: 3%;
+    padding-right: 0%;
+    padding-bottom: 3%;
+    margin-left: 30%;
+    
+}
+/* a{
+    font-weight: 500;
+    text-decoration: none;
+    color: #008BDC;
+    cursor: pointer;
+    line-height: 1.14285714;
+  } */
+.atagR{
+    color: #484848;
+    font-size: 12px;
+}
+
+h3{
+    font-family: 'Inter var',sans-serif;
+    color: #484848;
+}
+h4{
+    color: #484848;
+    font-size: 14px;
+}
+
+.boxheadR{
+    color: #484848;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+img{
+    width: 100px;
+    height: 60px;
+}
+.boxbottomR{
+    color: #484848;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+p{
+    color: #484848;
+    font-size: 15px;
+}
+.offerR{
+    color: #484848;
+    display: flex;
+    flex-direction: row;
+}
+    </style>
+</head>
+<body>
+    <div id="naav"></div>
+    <div class=countR>
+        <p style="font-size: 22px; margin-top: 20x;"><b>5593 total Internships</b></p>
+    </div>
+<div id="content">
+    
+    <div id="FilterR">
+      <div class="filtersetR">
+          <div class="filtertopR">
+            <h2 style="text-align: center; font-family: 'Inter var',sans-serif;
+            color: #484848; padding-top: 0px; padding-bottom: 0px;">Filter</h2>
+          </div>
+
+        <div class="FilterstartR">
+            <div>
+                <p style="margin-bottom: 5px; margin-top: 0px;">Category</p>
+                <input type="text" placeholder="e.g. Marketing" value="">
+            </div>
+            <div>
+                <p style="margin-bottom: 5px;">Location</p>
+                <input type="text" placeholder="e.g. Delhi" value="">
+            </br>
+            </br>
+                <select>
+                    <option value="Workfromhome">Work from home</option>
+                    <option value="Part-time">Part-time</option>
+                </select>
+            </div>
+            <div>
+                <P style="margin-bottom: 5px;">Starting from (or after)</P>
+                <input type="date" placeholder="Choose date" value="">
+            </div>
+            <div>
+                <p style="margin-bottom: 5px;">Max. duration (months)</p>
+                <input type="number" placeholder="Choose duration" value="">
+            </div>
+            </br>
+            <select>
+                <option value="Internshipforwomen">Internship for Women</option>
+                <option value="Inernshipwithjoboffer">Internship with Job Offer</option>
+            </select>
+            </br>
+            </br>
+            <div class="KeywordR">
+                <h3 style="text-align: center;">Keyword Search</h3>
+                <div class="KeywordformR">
+                    <input type="text" placeholder="e.g. Design, Mumbai, Infosys" autocomplete="off" value="" >
+                    <button style="background-color: rgb(72, 111, 238);width: 30px; height: 387x;"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            
+        </div>
+        
+
+        </div>
+      </div>
+      
+      
+    </div>
+    
+    <div id="TypeR">
+        <!-- Training detail boxes -->
+        <!-- Ad container -->
+        <div class="containerR" style="padding-right: 0%; padding-bottom:0%; margin-top: 27px;">
+            <div class="boxheadR">
+                <h3 style=" font-size: 20px; margin-top: 9px;">Become job-ready with this offer!</h3>
+                <div class="logo" style="margin-left: 0px;">70% Off</div>
+            </div>
+            <p> Get FLAT 70% OFF on your favourite online trainings</p>
+            <div class="offerR">
+                <p>Offer ends in</p>
+                <p id="demo"></p>
+            </div>
+            <P style="padding-bottom: 10px;">Choose from Web Dev., Python, Data Science, Marketing & more</P>
+            <div class="boxbottomR">
+                <h4 style="margin-top: 0px;   color: #484848;">Internship With Certificate</h4>
+                <a href="./shani.html" class="atagR" style="color: rgb(59, 67, 179); font-size: 20px;"><b>Enroll Now></b></a>
+            </div>
+        </div>
+
+        <!-- 1 -->
+        <div class="containerR" style="margin-top: 20px;">
+            <div class="boxheadR">
+                <h3 style=" font-size: 20px;">Marketing</h3>
+                <img src="https://internshala.com/static/images/common/new_internshala_logo.svg"/>
+            </div>
+            <div>
+               <div class="boxmidR">
+                <p>Gurgaon</p>
+                <p>Start immediately</p>
+                <p>Rs 20000/month</p>
+               </div>
+                <p>The hiring for this internship will be online and the company will provide work from home/ deferred joining till current COVID-19 situation improves</p>
+
+            </div>
+            <div class="boxbottomR">
+                <h4 style="margin-top: 0px;   color: #484848;">Internship With Certificate</h4>
+                <a href="" class="atagR" style="color: rgb(59, 67, 179); font-size: 20px;"><b>View details ></b></a>
+            </div>
+        </div>
+        <!-- 2 -->
+        <div class="containerR">
+            <div class="boxheadR">
+                <h3 style=" font-size: 20px;">Fund Raising</h3>
+                <img src="https://internshala.com/cached_uploads/logo%2F60c776e4d70c11623684836.jpg"/>
+            </div>
+            <div>
+                <div class="boxmidR">
+                    <p>Work From Home</p>
+                    <p>Start immediately</p>
+                    <p>Rs 5000/month + Incentives</p>
+                </div>
+
+                <p>The hiring for this internship will be online and the company will provide work from home/ deferred joining till current COVID-19 situation improves</p>
+
+            </div>
+            <div class="boxbottomR">
+                <h4 style="margin-top: 0px;   color: #484848;">Internship</h4>
+                <a href="" class="atagR" style="color: rgb(59, 67, 179); font-size: 20px;"><b>View details ></b></a>
+            </div>
+        </div>
+        <!-- 3-->
+        <div class="containerR">
+            <div class="boxheadR">
+                <h3 style=" font-size: 25px;">Community Influencing</h3>
+                <img src="https://internshala.com/cached_uploads/logo%2F62417669de2311648457321.jpg"/>
+            </div>
+            <div class="boxmidR">
+                <p>Work From Home</p>
+                <p>Start immediately</p>
+                <p>Rs 1000- 5000/Week</p>
+            </div>
+
+                <p>The hiring for this internship will be online and the company will provide work from home/ deferred joining till current COVID-19 situation improves</p>
+
+            <div class="boxbottomR">
+                <h4 style="margin-top: 0px;   color: #484848;">Internship With Certificate</h4>
+                <a href="" class="atagR" style="color: rgb(59, 67, 179); font-size: 20px;"><b>View details ></b></a>
+            </div>
+        </div>
+        <!-- 4-->
+        <div class="containerR">
+            <div class="boxheadR">
+                <h3 style=" font-size: 20px;">Human Resource(HR)</h3>
+                <img src="https://internshala.com/cached_uploads/logo%2F6240303abcaec1648373818.png"/>
+            </div>
+            <div class="boxmidR">
+                <p>Work From Home</p>
+                <p>Start immediately</p>
+                <p>Rs 5000/Month + Incentives</p>
+            </div>
+            <div class="boxbottomR">
+                <h4 style="margin-top: 0px;  color: #484848;">Internship With Certificate</h4>
+                <a href="" class="atagR" style="color: rgb(59, 67, 179); font-size: 20px;"><b>View details ></b></a>
+            </div>
+        </div>
+        <!-- 5-->
+        <div class="containerR">
+            <div class="boxheadR">
+                <h3 style=" font-size: 20px;">Content Writing</h3>
+                <img src="https://internshala.com/static/images/common/new_internshala_logo.svg"/>
+            </div>
+            <div class="boxmidR">
+                <p>Work From Home</p>
+                <p>Start immediately</p>
+                <p>Rs 7000/Month</p>
+            </div>
+
+            <p>The hiring for this internship will be online and the company will provide work from home/ deferred joining till current COVID-19 situation improves</p>
+
+            <div>
+
+            </div>
+            <div class="boxbottomR">
+                <h4 style="margin-top: 0px;    color: #484848;">Internship With Certificate</h4>
+                <a href="" class="atagR" style="color: rgb(59, 67, 179); font-size: 20px;"><b>View details ></b></a>
+            </div>
+        </div>
+        <!-- 6 -->
+        <div class="containerR">
+            <div class="boxheadR">
+                <h3 style=" font-size: 20px;">Entrepreneurship Development</h3>
+                <img src="https://internshala.com/cached_uploads/logo%2F618e1131f14e01636700465.png"/>
+            </div>
+            <div class="boxmidR">
+                <p>Work From Home</p>
+                <p>Start immediately</p>
+                <p>Rs 2000/Week</p>
+                <p>Part Time Allowed</p>
+            </div>
+            <div class="boxbottomR">
+                <h4 style="margin-top: 0px;   color: #484848;">Internship</h4>
+                <a href="" class="atagR" style="color: rgb(59, 67, 179); font-size: 20px;"><b>View details ></b></a>
+            </div>
+        </div>
+        <!-- 7-->
+        <div class="containerR">
+            <div class="boxheadR">
+                <h3 style=" font-size: 20px;">Data Science</h3>
+                <img src="https://internshala.com/static/images/common/new_internshala_logo.svg"/>
+            </div>
+            <div class="boxmidR">
+                <p>Work From Home</p>
+                <p>Start immediately</p>
+                <p>Rs 7000/Month</p>
+            </div>
+
+            <p>The hiring for this internship will be online and the company will provide work from home/ deferred joining till current COVID-19 situation improves</p>
+
+            <div>
+
+            </div>
+            <div class="boxbottomR">
+                <h4 style="margin-top: 0px;   color: #484848;">Internship With Certificate</h4>
+                <a href="" class="atagR" style="color: rgb(59, 67, 179); font-size: 20px;"><b>View details ></b></a>
+            </div>
+        </div>
+       
+    </div>
+</div>
+<div id="foot"></div>
+</body>
+
+</html>
+<script src="./script/login.js"></script>
+<script>
+    // Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (100000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+<script src="./script/navfunc.js"></script>
+<script type="module">
+    
+    import navbar from "./components/nav.js"
+
+    let append = document.getElementById("naav")
+    append.innerHTML = navbar();
+
+    import footer from "./components/footer.js"
+    let foot=document.querySelector("#foot");
+    foot.innerHTML=footer();    
+</script>
+

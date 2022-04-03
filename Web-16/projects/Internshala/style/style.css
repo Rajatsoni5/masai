@@ -1,0 +1,159 @@
+*{
+    font-family: sans-serif;
+    text-decoration: none;
+}
+#container{
+    width: 100%;
+    height: fit-content;
+    margin: 0px 0px 0px 72px;
+}
+#header{
+    width: 90%;
+    font-size:28px;
+    margin-bottom:0px;
+    margin-top:20px;
+    text-align: center;
+    font-weight: bold;
+    color: #333333;
+
+}
+.item{
+    padding:20px;
+    border:0px solid;
+    height:250px;
+    text-align: center;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.secondDiv{
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-top:30px;
+}
+.image{
+    width: 100%;
+    height: 50%;
+}
+.item>p{
+    margin:0px;
+}
+.thirdDiv{
+    font-size: 12px;
+    color: #666666;
+    padding-top:5px;
+    font-weight: bold;
+
+}
+.fourthDiv{
+    font-weight:bold;
+    color: #008BDC;
+    font-size:14px;
+    padding-top:5px;
+    
+}
+.title{
+    color: #333333;
+    margin: 5px;
+
+}
+.description{
+    font-size:14px;
+    margin-top:0px;
+    color: #484848;
+}
+
+.secondHeading{
+    font-size:18px;
+    color:#484848;
+    font-weight:bold;
+    margin-top:30px;
+}
+#internshipSection>div{
+    width:90%;
+    padding:5px 40px;
+    color: #333333;
+}
+#internshipSection{
+    margin-top:50px;
+    width: 100%;
+    background-color: rgb(224, 244, 252);
+}
+#internshipSection>div>h4{
+    text-align: center;
+    font-size:28px;
+}
+#internshipRow{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    grid-gap: 30px;
+    padding:0px;
+    margin-left: 30px;
+    height:500px;
+}
+.internship>div:nth-child(1){
+    margin-top:20px;
+}
+.internship{
+    height:390px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius:10px;
+}
+#internship1{
+    background-image: url(https://trainings.internshala.com/cached_uploads/home/images/jos/digital-marketing-specialization-1920.png);
+    background-size: 390px;
+}
+#internship2{
+    background-image: url(https://trainings.internshala.com/cached_uploads/home/images/jos/human-resource-management-specialization-1920.png);
+    background-size: 390px;
+}
+#internship3{
+    background-image: url(https://trainings.internshala.com/cached_uploads/home/images/jos/data-science-specialization-1920.png);
+    background-size: 390px;
+}
+.paraS1{
+    font-size:24px;
+    color:#333333;
+    font-weight:bold;
+    margin: 8px 0px 0px 20px;
+}
+.paraS2{
+    font-size:14px;
+    color:#333333;
+    margin: 20px 0px 0px 20px;
+}
+span{
+    font-size:14px;
+    font-weight: bold;
+    color:#333333;
+}
+.paraS2+p{
+    font-size:12px;
+    margin: 20px 0px 0px 20px;
+    color:#333333;
+    font-weight: bold;
+    font-style:italic;
+}
+.courses{
+    width: 80%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-top:20px;
+    border-radius:10px;
+    color: #484848;
+    border: 1px solid rgb(95, 95, 250);
+}
+.courses+div{
+    background-color: rgb(95, 95, 250);
+    color: white;
+    font-size:14px;
+    padding:15px;
+    width: 80px;
+    border-radius:5px;
+    margin: 20px;
+    font-weight:bold;
+}
+

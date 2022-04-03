@@ -1,0 +1,93 @@
+#google {
+
+    display: flex;
+    height: 40px;
+    border: 1px solid gray;
+    justify-content: center;
+    width: 90%;
+    margin-top: 25px;
+    margin-left: 15px;
+    }
+    
+    #google>div>img {
+    padding-top: 10px
+    }
+    
+    #google>div:nth-child(2)>p {
+    padding-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+    
+    }
+    
+    #email {
+    margin-left: 12px
+    }
+    
+    #email>p {
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+    }
+    
+    #email>input {
+    width: 90%;
+    height: 30px;
+    border: 1px solid gray;
+    padding-left: 10px;
+    }
+    
+    #password {
+    margin-left: 12px;
+    
+    }
+    
+    #password>p {
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+    }
+    
+    #password>input {
+    width: 90%;
+    height: 30px;
+    padding-left: 10px;
+    
+    }
+    
+    #link>a {
+    margin-left: 300px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+    
+    }
+    
+    #login {
+    margin-left: 20px;
+    }
+    
+    #login>button {
+    width: 90%;
+    height: 40px;
+    background: #00a5ec;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    }
+    
+    h6 {
+    margin-left: 50px;
+    margin-top: 20px;
+    }
+    
+    h6>a {
+    text-decoration: none;
+    }
+    
+    .modal-header>div {
+    display: flex;
+    justify-content: space-around
+    }
