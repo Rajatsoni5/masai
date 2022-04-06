@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throw Dice</title>
+</head>
+<body>
+
+    <div id="race">
+
+    </div>
+    <button id="roll" onclick="diceRoll()">ROLL THE DICE</button>
+</body>
+</html>
+
+<script>
+
+    var race = document.getElementById("race");
+    value = null
+    function diceRoll() {
+     
+        let value = Math.floor((Math.random()*6)+1);
+        
+        let div = document.createElement("div")
+
+        let member1 = document.createElement("p")
+        member1.innerHTML = value
+        member1.id = "member-1"
+
+       
+
+        let member3 = document.createElement("p")
+        member3.innerHTML = value
+        member3.id = "member-3"
+
+        div.append(member1, member3);
+
+       race.append(div);
+    }
+
+    function diceRoll(){
+
+        let value = Math.floor((Math.random()*6)+1);
+        
+        let div = document.createElement("div")
+
+        let member2 = document.createElement("p")
+        member2.innerHTML = value
+        member2.id = "member-2"
+
+        div.append(member2);
+
+    race.append(div);
+
+    }
+    diceRoll();
+</script>
