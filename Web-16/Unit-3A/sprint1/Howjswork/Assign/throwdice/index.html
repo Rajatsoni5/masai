@@ -7,10 +7,13 @@
     <title>Throw Dice</title>
 </head>
 <body>
+    <div id="winner"></div>
 
-    <div id="race">
+    
+    <div id="member-1"></div>
+    <div id="member-2"></div>
+    <div id="member-3"></div>
 
-    </div>
     <button id="roll" onclick="diceRoll()">ROLL THE DICE</button>
 </body>
 </html>
@@ -18,42 +21,27 @@
 <script>
 
     var race = document.getElementById("race");
-    value = null
+   
     function diceRoll() {
      
-        let value = Math.floor((Math.random()*6)+1);
+        let value1 = Math.floor((Math.random()*6)+1);
+        let value2 = Math.floor((Math.random()*6)+1);
+        let value3 = Math.floor((Math.random()*6)+1);
         
-        let div = document.createElement("div")
+        document.getElementById("member-1").innerHTML = `<p>A   ${value1} </p>`
+        document.getElementById("member-2").innerHTML = `<p>B   ${value2} </p>`
+        document.getElementById("member-3").innerHTML = `<p>C   ${value3} </p>`
 
-        let member1 = document.createElement("p")
-        member1.innerHTML = value
-        member1.id = "member-1"
-
-       
-
-        let member3 = document.createElement("p")
-        member3.innerHTML = value
-        member3.id = "member-3"
-
-        div.append(member1, member3);
-
-       race.append(div);
+    if(value1 > value2 && value1>value3){
+        document.getElementById("member-1").style.backgroundColor =  "green"
+     }
+     if(value2 > value1 && value2> value3){
+        document.getElementById("member-2").style.backgroundColor=  "green"
+     }
+     if(value3 > value2 && value3>value1){
+        document.getElementById("member-3").style.backgroundColor=  "green"
+     }
+     
     }
-
-    function diceRoll(){
-
-        let value = Math.floor((Math.random()*6)+1);
-        
-        let div = document.createElement("div")
-
-        let member2 = document.createElement("p")
-        member2.innerHTML = value
-        member2.id = "member-2"
-
-        div.append(member2);
-
-    race.append(div);
-
-    }
-    diceRoll();
+   
 </script>
