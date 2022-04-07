@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="storeProduct(event)" id="products">
+
+        <input type="text" id="name" placeholder="Name"/>
+        <input type="text" id="brand" placeholder="Brand" />
+        <input type="number" id="price" placeholder="price"/>
+
+        <input type="submit"/>
+    </form>
+    
+</body>
+</html>
+
+<script>
+
+// function Nikepro(n,p){
+
+//     let obj = {}
+
+//     obj.name= n
+//     obj.price=p
+
+//     return obj;
+// }
+
+// let p1 = Nikepro("shoes",2000)
+// console.log("p1", p1)
+
+
+// constructor function
+// this(return into obj and point out specific statement/owner)
+// new(it return the obj)
+
+// let arr = [];
+
+// function Product(n, p, b) {
+
+//     this.name = n;
+//     (this.price = p), (this.brand = b);
+// }
+
+// function storeProducts(e){
+// e.preventDefault();
+
+// let form = document.getElementById("products");
+
+// let name = form.name.value;
+
+// let price = form.price.value;
+
+// let brand = form.brand.value;
+
+// let p1 = new Product(name, price, brand);
+
+// arr.push(p1)
+// console.log("arr:",arr)
+// }
+
+let kitchen = {
+    name: 'kitchen',
+    purpose: 'cook',
+
+    cookFood: function(order){
+        console.log(`serving ${order} in ${this.name}`);
+    },
+};
+
+let bedroom = {
+    name: 'bedroom',
+    purpose: 'sleep'
+
+};
+
+let store = {
+    name: 'store',
+    purpose: 'storing'
+};
+
+kitchen.cookFood("meggie")
+
+// sharing the coodfood function to get food in another room
+// we use call function for changing  the owner object for "this.name"
+
+kitchen.cookFood.call(bedroom, "peg")
+
+kitchen.cookFood.call(store, "patty")
+
+
+
+let Rajat = {
+    superpower: 'speaking'
+}
+
+let pinki = {
+    
+    superpower: 'sleeping'
+}
+
+function superpower() {
+    console.log(`i have ${this.superpower} power`)
+}
+
+superpower.call(Rajat);
+
+
+</script>
