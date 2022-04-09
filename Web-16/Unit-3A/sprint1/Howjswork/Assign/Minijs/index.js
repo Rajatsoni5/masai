@@ -2,8 +2,6 @@
 
 //Information should be retrieved from localstorage only, avoid hard coding data.
 const scopeShow = document.getElementsByClassName("scopeshow");
-console.log("scopeShow", scopeShow)
-
 
 let scopeobj = {
     point1: "The scope manages the availability of variables",
@@ -16,18 +14,13 @@ let scopeobj = {
 function scope() {
     
     let ulElement = document.createElement("ul");
-    console.log("ulElement", ulElement)
     ulElement.className = "point"
 
-  
-
+    // save points in localstorage
     localStorage.setItem("scope", JSON.stringify(scopeobj))
     
+    // get poits by the key
     let result = JSON.parse(localStorage.getItem("scope"))
-
-//    const ulclass = document.getElementsByClassName("point")
-
-//    console.log("ulClass", ulClass)
 
     for(const key in result){
        let liElement = document.createElement("li");
