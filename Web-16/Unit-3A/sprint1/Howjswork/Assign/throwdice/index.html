@@ -32,6 +32,7 @@
         document.getElementById("member-2").innerHTML = `<p>B   ${value2} </p>`
         document.getElementById("member-3").innerHTML = `<p>C   ${value3} </p>`
 
+        // green
     if(value1 > value2 && value1>value3){
         document.getElementById("member-1").style.backgroundColor =  "green"
      }
@@ -41,7 +42,27 @@
      if(value3 > value2 && value3>value1){
         document.getElementById("member-3").style.backgroundColor=  "green"
      }
-     
+    //  yellow
+    if(value1 > value2 && value1< value3){
+        document.getElementById("member-1").style.backgroundColor =  "Yellow"
+    }
+    if(value2 > value1 && value2 < value3){
+        document.getElementById("member-2").style.backgroundColor =  "Yellow"
+    }
+    if(value3 > value2 && value3< value1){
+        document.getElementById("member-3").style.backgroundColor =  "Yellow"
+    }
+    //  red
+    if(value1<value2 && value1<value3){
+        document.getElementById("member-1").style.backgroundColor =  "red"
+    };
+    if(value2<value1 && value2<value3){
+        document.getElementById("member-2").style.backgroundColor =  "red"
+    };
+    if(value3<value2 && value3<value1){
+        document.getElementById("member-3").style.backgroundColor =  "red"
+    };
+    
     }
    
 </script>
