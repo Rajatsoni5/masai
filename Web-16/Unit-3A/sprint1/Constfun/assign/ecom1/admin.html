@@ -7,7 +7,7 @@
     <title>Admin Panel</title>
 </head>
 <body>
-    <form onsubmit="details()" id="formdetails">
+    <form onsubmit="details()" id="form">
 
     <input id="name" type="text" placeholder="Product name"/>
     <input id="category" type="text" placeholder="category"/>
@@ -24,25 +24,42 @@
 
     <input id="add" type="submit">
     </form>
-    <script>
 
-
-        function details(e) {
-            e.preventDefault();
-        
-            const name = document.getElementById("name");
-            console.log(name)
-            console.log(name.value)
-            let form = document.getElementById("formdetails");
-        
-            console.log(form)
-            console.log(form.value)
-            // localStorage.setItem("products:", formdata)
-        }
-        
-        
-        
-        </script>
 </body>
 </html>
+
+<script>
+
+    document.getElementById("form").addEventListener("submit", getdata);
+
+    let arr = JSON.parse(localStorage.getItem("product"))||[]
+
+    function getdata() {
+
+        let form = document.getElementById("form");
+
+        let name = form.name.value;
+        let category = form.category.value;
+        let image = form.image.value;
+        let price = form.price.value;
+        let gender = form.gender.value;
+        let sold = form.sold.value;
+
+        let p1 = new CheckData(name,category,image,price,gender,sold);
+
+        arr.push(p1);
+
+        localStorage.setItem("product", JSON.stringify(arr))
+
+    };
+
+    function CheckData (n,c,i,p,g,s){
+        this.name =  n;
+        this.category = c;
+        this.image = i;
+        this.price = p;
+        this.gender = g;
+        this.sold = s;
+    };
+</script>
 

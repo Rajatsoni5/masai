@@ -22,10 +22,10 @@ function scope() {
     // get poits by the key
     let result = JSON.parse(localStorage.getItem("scope"))
 
-    for(const key in result){
+    for(const deail in result){
        let liElement = document.createElement("li");
        liElement.className = "scopeElement"
-       liElement.innerText = result[key];
+       liElement.innerText = result[deail];
 
        ulElement.appendChild(liElement)
         // console.log(result[key])
