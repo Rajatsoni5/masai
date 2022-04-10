@@ -22,18 +22,45 @@ function scope() {
     // get poits by the key
     let result = JSON.parse(localStorage.getItem("scope"))
 
-    for(const deail in result){
+    for(const detail in result){
        let liElement = document.createElement("li");
        liElement.className = "scopeElement"
-       liElement.innerText = result[deail];
+       liElement.innerText = result[detail];
 
        ulElement.appendChild(liElement)
         // console.log(result[key])
-        console.log(ulElement)
+        // console.log(ulElement)
 
     }
 
     scopeShow[0].appendChild(ulElement)
+}
 
-    // scopeshow.append(scopeobj);
+const hoisting = document.getElementsByClassName("hoistshow");
+
+let hoistobj = {
+    point1: "It is the process whereby the interpreter appears to move the declaration of functions",
+    point2: "Hoisting allows functions to be safely used in code before they are declared.",
+    point3: "Hoisting is JS's default behavior of defining all the declarations at the top of the scope before code execution.",
+    point4: "it enables us to call functions before they appear in the code.",
+    point5: "Some ways to avoid hoisting are: Use let or const"
+}
+
+function hoisiting() {
+
+    let ulElement = document.createElement("ul");
+    ulElement.className = "point";
+
+    localStorage.setItem("Hoisting:", JSON.stringify(hoistobj));
+
+    var result = JSON.parse(localStorage.getItem("Hoisting"));
+
+    for(const key in result){
+        let liElement = document.createElement("li");
+        liElement.className = "HoistElement";
+        liElement.innerHTML = result[key];
+
+        ulElement.appendChild(liElement)
+    }
+    hoistshow[0].appendChild(ulElement)
 }
