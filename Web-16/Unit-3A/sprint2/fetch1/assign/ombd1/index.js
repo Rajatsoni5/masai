@@ -2,6 +2,10 @@
 async function searchHit() {
 
     let moviename = document.getElementById("search").value;
+
+    moviename.innerText = ""
+
+    // let moviename = document.getElementById("search").value;
     let print = document.getElementById("print");
 
     console.log("movie", moviename) 
@@ -17,10 +21,33 @@ async function searchHit() {
         if(res.error) {
             print.innerHTML = res.Error
         } else {
-            let h3 = document.createElement("h3");
-            h3.innerText = res.Title;
+            let Title = document.createElement("h3");
+            Title.className = "text"
+            Title.innerText = res.Title;
 
-            print.appendChild(h3)
+            let Year = document.createElement("p");
+            Year.className = "text"
+            Year.innerText = res.Year;
+
+            let Country = document.createElement("p");
+            Country.className = "text"
+            Country.innerText = res.Country;
+            
+            let Actors = document.createElement("p");
+            Actors.className = "text"
+            Actors.innerText = res.Actors;
+            
+            let Language = document.createElement("p");
+            Language.className = "text"
+            Language.innerText = res.Language;
+            
+            let image = document.createElement("img")
+            image.className = "img"
+            image.src = res.Poster
+
+
+
+            print.appendChild(Title,Year,Country,Actors,Language)
         }
 
 
@@ -28,7 +55,7 @@ async function searchHit() {
     } catch (error) {
         print.innerText = error.message
     }
-    moviename.innerText = ""
+
 }
 
 // movie();
