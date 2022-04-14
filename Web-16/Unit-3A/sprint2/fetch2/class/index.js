@@ -1,3 +1,6 @@
+// api.openweathermap.org/data/2.5/forecast/daily?q=${city}&appid=f2cc6f2187caea11b4c880e14cc75c11
+
+
 function getData() {
     let city = document.getElementById("city").value;
   
@@ -11,6 +14,23 @@ function getData() {
       .then(function (res) {
         append(res);
         console.log(res);
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+  }
+
+  async function getData() {
+    let city = document.getElementById("city").value;
+  
+        const res = await fetch(`api.openweathermap.org/data/2.5/forecast/daily?q=${city}&cnt={cnt}&appid=f2cc6f2187caea11b4c880e14cc75c11
+        `)
+      .then(function (res) {
+        return res.json();
+      })
+      .then(function (res) {
+        // append(res);
+        console.log("ok",res);
       })
       .catch(function (err) {
         console.log(err);
