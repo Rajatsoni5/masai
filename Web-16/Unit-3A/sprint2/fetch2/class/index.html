@@ -8,10 +8,15 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    
+   <div id="top">
+    <img style="height: 70px; width: 70px; border-radius: 10px;" src="https://icon-library.com/images/weather-app-icon/weather-app-icon-9.jpg"/>
+    <h1 style="font-style: italic;">Get Your Whether Details Here!</h1>
+   </div>
     <!-- <button onclick="getWeather()">Get Weather on loaction</button> -->
-    <input type="text" id="city" />
-    <button onclick="getData()" id="submit">Submit</button>
+   <div class="search">
+    <input type="text" placeholder="City Name" id="city" />
+    <button style="height: 30px;" onclick="getData()" id="submit">Submit</button>
+   </div>
     <div id="details">
         <div id="container"></div>
     <div class="mapouter">
@@ -27,6 +32,10 @@
         ></iframe>
       </div>
     </div>
+    </div>
+    <div>
+        <button onclick="forecast()">Check Forcast</button>
+        <div id="showForecast"></div>
     </div>
     <script src="index.js"></script>
 </body>

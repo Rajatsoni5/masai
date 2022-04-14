@@ -20,22 +20,22 @@ function getData() {
       });
   }
 
-  async function getData() {
-    let city = document.getElementById("city").value;
+//   async function getData() {
+//     let city = document.getElementById("city").value;
   
-        const res = await fetch(`api.openweathermap.org/data/2.5/forecast/daily?q=${city}&cnt={cnt}&appid=f2cc6f2187caea11b4c880e14cc75c11
-        `)
-      .then(function (res) {
-        return res.json();
-      })
-      .then(function (res) {
-        // append(res);
-        console.log("ok",res);
-      })
-      .catch(function (err) {
-        console.log(err);
-      });
-  }
+//         const res = await fetch(`api.openweathermap.org/data/2.5/forecast/daily?q=${city}&cnt={cnt}&appid=f2cc6f2187caea11b4c880e14cc75c11
+//         `)
+//       .then(function (res) {
+//         return res.json();
+//       })
+//       .then(function (res) {
+//         // append(res);
+//         console.log("ok",res);
+//       })
+//       .catch(function (err) {
+//         console.log(err);
+//       });
+//   }
   
 //   function getDataLocation(lat, lon) {
 //     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=f2cc6f2187caea11b4c880e14cc75c11
@@ -106,3 +106,15 @@ function getData() {
 //     }
 //   }
   
+
+async function forecast(){
+    let city = document.getElementById("city").value;
+
+    let data = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=f2cc6f2187caea11b4c880e14cc75c11`)
+
+    let more = await data.json()
+
+    console.log("More", more)
+
+
+}
