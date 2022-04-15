@@ -31,3 +31,23 @@ input{
 .text{
     font-size: 15px;
 }
+#showForecast{
+    display: grid;
+    grid-template-columns: repeat(7, 150px);
+    /* align-items: center; */
+    justify-content: center;
+    margin-top: 15px;
+}
+.forecastBox{
+    border: 2px solid white;
+    height: 160px;
+    margin-left: 10px;
+    border-radius: 5px;
+    border-style: groove;
+    text-align: center;
+    background-image: url(https://wallpaperaccess.com/full/625416.jpghttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFjW8z9k7zipdeLMkGeMu4iGv4lo4OOMr9NA&usqp=CAU);
+}
+img{
+    height: 50px;
+    width: 50px;
+}

@@ -108,13 +108,40 @@ function getData() {
   
 
 async function forecast(){
-    let city = document.getElementById("city").value;
+
+    try {
+      let city = document.getElementById("city").value;
 
     let data = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=f2cc6f2187caea11b4c880e14cc75c11`)
 
     let more = await data.json()
 
-    console.log("More", more)
+    // console.log("More", more)
+    for(var i=0; i<7; i++){
+      console.log("forecast",more.list[i])
 
+      let showForecast = document.getElementById("showForecast");
 
+      let box = document.createElement("div")
+      box.className = "forecastBox"
+
+      let max = document.createElement("p")
+      max.innerText = more.list[i].main.temp_max
+
+    
+      let min = document.createElement("p")
+      min.innerText = more.list[i].main.temp_min
+
+      let img = document.createElement("img")
+      img.src = "https://i.pinimg.com/originals/0e/f3/bb/0ef3bb66d9216fffcea9022628f7bb26.gif"
+
+      box.append(max,img,min)
+      showForecast.appendChild(box)
+    }
+    
+
+    } catch (error) {
+      console.log("error", error)
+      
+    }
 }
