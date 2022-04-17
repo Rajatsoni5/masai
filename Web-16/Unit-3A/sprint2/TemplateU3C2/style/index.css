@@ -1,0 +1,32 @@
+#navbar{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(255, 81, 0);
+    justify-content: end;
+    padding: 10px;
+}
+button{
+    margin-left: 5px;
+}
+#menu{
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    margin-top: 30px;
+    justify-content: center;
+}
+.foodBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    border-radius: 10px;
+    border-style: groove;
+    background-color: rgb(255, 81, 0);
+    height: 350px;
+    margin-left: 30px;
+
+}
+.img{
+    height: 200px;
+    width: 300px;
+}

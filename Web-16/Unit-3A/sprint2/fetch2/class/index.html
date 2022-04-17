@@ -10,15 +10,16 @@
 <body>
    <div id="top">
     <img style="height: 70px; width: 70px; border-radius: 10px;" src="https://icon-library.com/images/weather-app-icon/weather-app-icon-9.jpg"/>
-    <h1 style="font-style: italic;">Get Your Whether Details Here!</h1>
+    <h1 style="font-style: italic;">Get Your Weather Details Here!</h1>
    </div>
     <!-- <button onclick="getWeather()">Get Weather on loaction</button> -->
    <div class="search">
     <input type="text" placeholder="City Name" id="city" />
-    <button style="height: 30px;" onclick="getData()" id="submit">Submit</button>
-    <button style="height: 30px;" onclick="forecast()">Check Forcast</button>
+    <button style="height: 30px;" class="submit" onclick="getData()" id="submit">Submit</button>
+    <button style="height: 30px;" class="forecast" onclick="forecast()">Check Forcast</button>
 
    </div>
+   <div id="error"></div>
     <div id="details">
         <div id="container"></div>
     <div class="mapouter">

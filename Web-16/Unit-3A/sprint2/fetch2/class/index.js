@@ -3,6 +3,13 @@
 
 function getData() {
     let city = document.getElementById("city").value;
+    if(!city){
+      document.getElementById("error").innerHTML = "Please enter the valid City!"
+      setTimeout(()=> {
+        document.getElementById("error").innerHTML = " "
+      },2000)
+      return;
+    }
   
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=f2cc6f2187caea11b4c880e14cc75c11
     `;
@@ -76,15 +83,15 @@ function getData() {
     clouds.className = "text"
 
     let sunrise = document.createElement("p");
-    sunrise.innerText = `Sunrise: ${data.sys.sunrise}`;
+    sunrise.innerText = `Sunrise: ${new Date(data.sys.sunrise * 1000).toLocaleTimeString()}`;
     sunrise.className = "text"
 
     let sunset = document.createElement("p");
-    sunset.innerText = `Sunset: ${data.sys.sunset}`;
+    sunset.innerText = `Sunset: ${new Date(data.sys.sunset * 1000).toLocaleTimeString()}`;
     sunset.className = "text"
   
     let wind = document.createElement("p");
-    wind.innerText = `Wind: ${data.wind.speed}`;
+    wind.innerText = `Wind: ${data.wind.speed} kmps`;
     wind.className = "text"
   
     container.append(city,sunrise,sunset, min, max, clouds, wind);
@@ -117,6 +124,25 @@ async function forecast(){
     let more = await data.json()
 
     // console.log("More", more)
+    let date = new Date().getDay()
+  
+    var days = {
+      1: "Mon",
+      2: "Tue",
+      3: "Wed",
+      4: "Thur",
+      5: "Fri",
+      6: "Sat",
+      7: "Sun",
+      8: "Mon",
+      9: "Tue",
+      10: "Wed",
+      11: "Thur",
+      12: "Fri",
+      13: "Sat",
+      14: "Sun",
+    }
+
     for(var i=0; i<7; i++){
       console.log("forecast",more.list[i])
 
@@ -127,17 +153,27 @@ async function forecast(){
 
       let max = document.createElement("p")
       max.innerText = more.list[i].main.temp_max
+      max.className ="num"
 
     
       let min = document.createElement("p")
       min.innerText = more.list[i].main.temp_min
+      min.className ="num"
 
       let img = document.createElement("img")
-      img.src = "https://i.pinimg.com/originals/0e/f3/bb/0ef3bb66d9216fffcea9022628f7bb26.gif"
+      img.src = "https://icon-library.com/images/weather-icon-gif/weather-icon-gif-17.jpg"
 
-      box.append(max,img,min)
+      let day = document.createElement("h4")
+      day.innerText = days[date]
+      day.className ="num"
+
+      box.append(day,img,max,min)
       showForecast.appendChild(box)
+
+      date++;
     }
+
+
     
 
     } catch (error) {
