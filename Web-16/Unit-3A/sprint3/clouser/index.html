@@ -22,7 +22,7 @@
 <body>
     <h1>Hotstar</h1>
 
-    <input oninput="searchMovies()" type="text" id="query"/>
+    <input oninput="Debounc(main,1000)" type="text" id="query"/>
     <div id="movies"></div>
 </body>
 </html>
@@ -41,12 +41,13 @@
 
         let res = await fetch(`https://www.omdbapi.com/?apikey=2aea2a57&s=${query}`)
 
-        let data  = await res.json()
+        const data  = await res.json()
         console.log("data:", data)
 
         const movies = data.Search;
 
-        appendMovies(movies)
+
+       return movies;
 
        } catch (error) {
         console.log("error", error)   
@@ -54,23 +55,42 @@
     }
 
     function appendMovies(data){
-           if(data === undefined){
-               return false;
-           }
-           div.innerHTML = null;
 
-           data.forEach(function(el){
-               let p = document.createElement("p");
+        // optimization 2
+        div.innerHTML = null;
 
-               p.innerText = el.Title;
+        data.forEach(function(el){
+            let p = document.createElement("p");
 
-               div.append(p)
-           });
-       }
+            p.innerText = el.Title;
 
-       async function main(){
-           let data = await searchMovies();
-           console.log("data:", data);
-       }
+             div.append(p)
+         });
+    };
 
+
+// assemble upeer two function into one
+    async function main(){
+
+       let data = await searchMovies();
+
+                    // optimization 1
+        if(data === undefined){
+            return false;
+        };
+
+        appendMovies(data)
+    };
+
+// Debouncing
+
+function Debounc(func, delay){
+
+
+
+    setTimeout(function(){
+
+        func();
+    },delay)
+}
 </script>
