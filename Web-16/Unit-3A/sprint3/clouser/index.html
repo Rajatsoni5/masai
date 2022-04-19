@@ -31,6 +31,8 @@
 
     let div = document.getElementById("movies");
 
+    let id;
+
     async function searchMovies(){
         // https://www.omdbapi.com/?t=${moviename}&apikey=2aea2a57
         // https://www.omdbapi.com/?t=${moviename}&apikey=2aea2a57
@@ -86,9 +88,11 @@
 
 function Debounc(func, delay){
 
+    if(id){
+        clearTimeout(id)
+    }
 
-
-    setTimeout(function(){
+    id = setTimeout(function(){
 
         func();
     },delay)
