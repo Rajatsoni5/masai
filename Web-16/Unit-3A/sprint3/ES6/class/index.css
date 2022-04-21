@@ -1,0 +1,44 @@
+body{
+    background-color:aliceblue;
+}
+#navbar{
+display: flex;
+flex-direction: row;
+height: 30px;
+/* justify-content: space-between; */
+margin-top: 20px;
+}
+h1{
+margin-top: 4px;
+}
+.search{
+    margin-top: 6px;
+margin-left: 25%;
+}
+input{
+    width: 550px;
+    height: 25px;
+    margin-right: 0px;
+}
+button{
+    margin-left: 0px;
+    height: 30px;
+}
+.lens{
+    height: 25px;
+}
+#search_results{
+    margin-top: 50px;
+    justify-content: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.box{
+    text-align: center;
+    /* background-color: red; */
+    width: 375px;
+}
+.video{
+    height: 200px;
+    width: 370px;
+}

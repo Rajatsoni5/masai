@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #search_results{
+            display: grid;
+            grid-template-columns: repeat(4, 20%);
+            gap: 5%;
+        }
+
+    </style>
+
+</head>
+<body>
+<div id="navbar">
+    <i class="fa fa-youtube-play" style="font-size:48px;color:red"></i>
+    <h1>Youtube</h1>
+
+    <div class="search">   
+     <input type="text" placeholder="Search Video" id="search">
+
+    <button onclick="searchVideos()">Search</button>   
+    </div>
+</div>
+<hr style="margin-top: 30px;">
+
+    <div id="search_results"></div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
