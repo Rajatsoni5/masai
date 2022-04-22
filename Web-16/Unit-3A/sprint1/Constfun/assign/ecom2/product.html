@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        #Inventory{
+            display: grid;
+            grid-template-columns: repeat(3, 400px);
+            /* margin-left: 5%; */
+            /* margin-right: 5%; */
+            gap: 20px;
+            justify-content: center;
+
+        }
+        .product{
+            border: 2px solid white;
+            border-style: groove;
+            border-radius: 7px;
+            background-color: rgba(250, 215, 56, 0.857);
+            color: black;
+            text-align: center;
+
+        }
+        .text{
+            margin: 3%;
+        }
+        .bub{
+            font-size: 17px;
+            width: 90px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h4>Counter</h4>
+        <h4 class="count">0</h4>
+    </div>
+    <div id="Inventory"></div>
+</body>
+</html>
+
+<script>
+     var data = JSON.parse(localStorage.getItem("product"));
+    var stock = document.getElementById("Inventory");
+
+    var count = document.getElementById("count");
+    // count.innerText = "data.length";
+
+   
+    console.log("s", data)
+    for(let i=0; i<data.length; i++){
+
+        let div = document.createElement("div")
+        div.className = "product";
+
+        let name = document.createElement("h2");
+        name.innerText = data[i].name;
+        name.className = "text"
+
+        let category = document.createElement("p");
+        category.innerText = data[i].category;
+        category.className = "text"
+
+        let image= document.createElement("img");
+        image.src = data[i].image;
+
+        let price = document.createElement("p");
+        price.innerText = data[i].price;
+        price.className = "text"
+
+        let button1 = document.createElement("button")
+        button1.innerText = "Remove"
+        button1.className = "bub"
+
+        let button = document.createElement("button")
+        button.innerText = "Sold"
+        button.className = "bub"
+
+        
+        div.append(name, category, image, price ,button, button1)
+        stock.appendChild(div)
+        
+    }
+</script>

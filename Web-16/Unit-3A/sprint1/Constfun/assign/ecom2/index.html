@@ -13,7 +13,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: rgba(255, 217, 0, 0.857);
+            background-color: rgba(250, 215, 56, 0.857);
             color: white;
             width: 300px;
             margin-top: 40px;
@@ -35,6 +35,8 @@
         }
         #add{
             margin-bottom: 20px;
+            font-size: 20px;
+            padding: 4px;
         }
         h1{
             color: white;
@@ -50,11 +52,19 @@
             margin-bottom: 15px;
             margin-top: 12px;
         }
+        #show{
+            text-align: center;
+            height: 40px;
+            width: 310px;
+            margin-left: 42%;
+            margin-top: 30px;
+            font-size: 20px;
+        }
     </style>
 </head>
 <body>
     <h1>Admin Panel</h1>
-    <h4>Fill the form to add data.</h4>
+    <h4>Fill the form to add Product.</h4>
     <form onsubmit="details()" id="form">
 
     <input id="name" type="text" placeholder="Product name"/>
@@ -65,14 +75,14 @@
         <option value="female">Male</option>
         <option value="female">Female</option>
     </select>
-    <select id="sold" name="Sold">
+        <select id="sold" name="Sold">
         <option value="true">True</option>
         <option value="false" selected>False</option>
     </select>
 
     <input id="add" type="submit">
     </form>
-
+<button id="show" onclick="show()">Show Products</button>
 </body>
 </html>
 
@@ -109,4 +119,8 @@
         this.gender = g;
         this.sold = s;
     };
+
+function show(){
+    window.location.href = "product.html"
+}
 </script>
