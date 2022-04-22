@@ -1,0 +1,37 @@
+body{
+    background-color: aliceblue;
+    margin: 0% 20%;
+}
+h1{
+    margin-top: 5%;
+    text-align: center;
+    align-items: center;
+    font-style: italic;
+    color: white;
+    background-color: rgb(205, 167, 70);
+    width: 500px;
+    /* height: 50px; */
+    margin-left: 25%;
+    border-radius: 10px;
+    padding: 10px;
+}
+#container{
+    display: flex;
+
+}
+
+#input, #output{
+    height: 200px;
+    flex:1;
+    border: solid 3px black;
+    border-style: groove;
+    margin-top: 30px;
+
+}
+#output{
+    margin-left: 10%;
+}
+#input-text{
+    width: 90%;
+    height: 150px;
+}

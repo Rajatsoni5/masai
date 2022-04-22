@@ -4,38 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        #container{
-            display: flex;
-            border: solid 1px black;
-        }
-        #input{
-            height: 300px;
-            margin: 5%;
-            flex:1;
-        }
-        #input, #output{
-            height: 300px;
-            margin: 5%;
-            flex:1;
-            border: solid 1px black;
-        }
-        #input-text{
-            width: 90%;
-            height: 250px;
-        }
-    </style>
+    <title>Translator</title>
+<link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <h1>Let me Translate for you!</h1>
     <div id="container">
-
         <div id="input">
+            <select name="inp_lang" id="inp_lang">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="Da">Danish</option>
+                <option value="Du">Dutch</option>
+                <option value="Tu">Turkish</option>
+                <option value="Fr">French</option>
+                <option value="Ta">Tamil</option>
+                <option value="sp">Spanish</option>
+            </select>
             <button onclick="Translate()">Translate</button>
-            <textarea name="input-text" id="input-text"></textarea>
+            <textarea name="input-text" placeholder="Start writing..." id="input-text"></textarea>
         </div>
 
-        <div id="output"></div>
+        <div id="output">
+         
+            <select name="out_lang" id="out_lang">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="Da">Danish</option>
+                <option value="Du">Dutch</option>
+                <option value="Tu">Turkish</option>
+                <option value="Fr">French</option>
+                <option value="Ta">Tamil</option>
+                <option value="sp">Spanish</option>
+                
+            </select>
+            <p id="out-value"></p>
+        </div>
     </div>
 
 

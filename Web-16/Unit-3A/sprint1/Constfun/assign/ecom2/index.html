@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        #form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(255, 217, 0, 0.857);
+            color: white;
+            width: 300px;
+            margin-top: 40px;
+            margin-left: 42%;
+            border-radius: 4px;
+            border-style: groove;
+            border: 2px solid white;
+
+        }
+        input{
+            margin-top: 20px;
+            width: 200px;
+            height: 30px;
+        }
+        select{
+            margin-top: 20px;
+            width: 200px;
+            height: 30px;
+        }
+        #add{
+            margin-bottom: 20px;
+        }
+        h1{
+            color: white;
+            text-align: center;
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+        h4{
+            color: white;
+            text-align: center;
+            font-size: 40px;
+            font-style: italic;
+            margin-bottom: 15px;
+            margin-top: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Admin Panel</h1>
+    <h4>Fill the form to add data.</h4>
+    <form onsubmit="details()" id="form">
+
+    <input id="name" type="text" placeholder="Product name"/>
+    <input id="category" type="text" placeholder="category"/>
+    <input id="image" type="url" placeholder="img url"/>
+    <input id="price" type="number" placeholder="price">
+    <select id="gender" name="Gender">
+        <option value="female">Male</option>
+        <option value="female">Female</option>
+    </select>
+    <select id="sold" name="Sold">
+        <option value="true">True</option>
+        <option value="false" selected>False</option>
+    </select>
+
+    <input id="add" type="submit">
+    </form>
+
+</body>
+</html>
+
+<script>
+
+    document.getElementById("form").addEventListener("submit", getdata);
+
+    let arr = JSON.parse(localStorage.getItem("product"))||[]
+
+    function getdata() {
+
+        let form = document.getElementById("form");
+
+        let name = form.name.value;
+        let category = form.category.value;
+        let image = form.image.value;
+        let price = form.price.value;
+        let gender = form.gender.value;
+        let sold = form.sold.value;
+
+        let p1 = new CheckData(name,category,image,price,gender,sold);
+
+        arr.push(p1);
+
+        localStorage.setItem("product", JSON.stringify(arr))
+
+    };
+
+    function CheckData (n,c,i,p,g,s){
+        this.name =  n;
+        this.category = c;
+        this.image = i;
+        this.price = p;
+        this.gender = g;
+        this.sold = s;
+    };
+</script>
