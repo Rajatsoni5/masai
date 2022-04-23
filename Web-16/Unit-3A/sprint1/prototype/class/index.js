@@ -85,6 +85,7 @@ let a1 = new Array("x", "y", "z");
 // //this -> object
 
 function myArray() {
+  
   Object.defineProperty(this, "length", {
     value: 0,
     writable: true,
