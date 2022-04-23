@@ -90,7 +90,7 @@
 
     document.getElementById("form").addEventListener("submit", getdata);
 
-    let arr = JSON.parse(localStorage.getItem("product"))||[]
+    let arr = JSON.parse(localStorage.getItem("products"))||[]
 
     function getdata() {
 
@@ -107,7 +107,7 @@
 
         arr.push(p1);
 
-        localStorage.setItem("product", JSON.stringify(arr))
+        localStorage.setItem("products", JSON.stringify(arr))
 
     };
 

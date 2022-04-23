@@ -1,62 +1,69 @@
-// const cat = {
-//     legs: 4,
-//     tail: true,
-//     furs: true,
-//     jumping: true,
-//     claws: "sharp",
-// };
+const cat = {
+    legs: 4,
+    tail: true,
+    furs: true,
+    jumping: true,
+    claws: "sharp",
+};
 
-// //effecient way - object.create()
+//effecient way - object.create()
 
-// const tiger = Object.create(cat);
-// console.log("tiger", tiger)
+const tiger = Object.create(cat);
+console.log("tiger", tiger)
 
 
-// function student(n,a) {
-//     this.name = n;
-//     this.age = a;
-// };
+function student(n,a) {
+    this.name = n;
+    this.age = a;
+};
 
-// // when you make a constructor fun. it will stire value in obj not in prototype
+// when you make a constructor fun. it will stire value in obj not in prototype
 
-// // student.prototype.course = "fswd";
-// // This will store under prototype
-
+// student.prototype.course = "fswd";
+// This will store under prototype
 
 // let s1 = new student("rocky", 2); 
-
-// // Student.prototype.bio = function () {
-// //   console.log(`hello from ${this.name}`);
-// // };
-
-// // let s1 = new Student("saber", 3);
-
-// // s1.bio();
-
 // console.log("s1", s1)
 
-// function flipkart(t,b,p) {
-
-//     this.shoetype = t;
-//     this.brand = b;
-//     this.price = p;
-// };
+student.prototype.bio = function () {
+  console.log(`hello from ${this.name}`);
+};
 
 
-// let s1 = new flipkart("sneaker", "nike", 2000)
 
-// // adding couppon with 2 methond
-// // methond-1
+let s1 = new student("saber", 3);
+
+s1.bio();
+
+console.log("s1", s1)
+
+function flipkart(t,b,p) {
+
+    this.shoetype = t;
+    this.brand = b;
+    this.price = p;
+};
+
+
+let s2 = new flipkart("sneaker", "nike", 2000)
+
+// adding couppon with 2 methond
+
+// methond-1
 // flipkart.prototype.coupon = "20%off"
 
-// // method-2
-// flipkart.prototype.coupon = function(){
-//     console.log("20%off on this product")
-// }
-// s1.coupon();
+// method-2
+flipkart.prototype.coupon = function(){
+    console.log("20%off on this product")
+}
+
+s2.coupon();
 
 
-// console.log("s1", s1)
+console.log("s2", s2)
+
+
+// --------------------------------------------------------------
 
 // let arr = [1, 2, 3];
 
@@ -64,59 +71,59 @@
 
 // let arr2 = [4, 5, 6];
 
-// console.log(arr2.myProp);
+// console.log(arr.myProp);
 
 //1. arr
 //pop
 
 //Create Custom Hindi Array functions
-
 //Array Connstructor function
 
-// let a1 = new Array("x", "y", "z");
+let a1 = new Array("x", "y", "z");
 
 // //arguments object
 // //this -> object
-// function myArray() {
-//   Object.defineProperty(this, "length", {
-//     value: 0,
-//     writable: true,
-//     enumerable: false, //dont count this property
-//   });
 
-//   this.length = arguments.length;
+function myArray() {
+  Object.defineProperty(this, "length", {
+    value: 0,
+    writable: true,
+    enumerable: false, //dont count this property
+  });
 
-//   // 0: x
-//   // 1: y
-//   // 2: z
-//   // 3: a - last
+  this.length = arguments.length;
 
-//   //  lhs(index) = rhs(value)
+  // 0: x
+  // 1: y
+  // 2: z
+  // 3: a - last
 
-//   for (let i = 0; i < this.length; i++) {
-//     this[i] = arguments[i];
-//   }
-// }
+  //  lhs(index) = rhs(value)
 
-// let a2 = new myArray("x", "y", "z");
+  for (let i = 0; i < this.length; i++) {
+    this[i] = arguments[i];
+  }
+}
 
-// myArray.prototype.पुश = function (value) {
-//   let index = this.length;
-//   this[index] = value;
-//   this.length++;
-// };
+let a2 = new myArray("x", "y", "z");
 
-// myArray.prototype.हटाओ = function () {
-//   let index = this.length - 1;
+myArray.prototype.पुश = function (value) {
+  let index = this.length;
+  this[index] = value;
+  this.length++;
+};
 
-//   delete this[index];
+myArray.prototype.हटाओ = function () {
+  let index = this.length - 1;
 
-//   this.length--;
-// };
+  delete this[index];
 
-// a2.पुश("a");
-// a2.पुश("b");
-// a2.हटाओ();
-// a2.हटाओ();
+  this.length--;
+};
 
-// console.log("a2:", Object.values(a2));
+a2.पुश("a");
+a2.पुश("b");
+a2.हटाओ();
+a2.हटाओ();
+
+console.log("a2:", Object.values(a2));

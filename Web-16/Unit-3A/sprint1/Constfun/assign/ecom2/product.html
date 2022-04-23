@@ -47,14 +47,14 @@
 </html>
 
 <script>
-     var data = JSON.parse(localStorage.getItem("product"));
+    
     var stock = document.getElementById("Inventory");
 
-    var count = document.getElementById("count");
+    // var count = document.getElementById("count");
     // count.innerText = "data.length";
 
-   
-    console.log("s", data)
+    var data = JSON.parse(localStorage.getItem("products"));
+
     for(let i=0; i<data.length; i++){
 
         let div = document.createElement("div")
@@ -77,15 +77,37 @@
 
         let button1 = document.createElement("button")
         button1.innerText = "Remove"
-        button1.className = "bub"
+        button1.setAttribute("id","remove");
+        button1.onclick= ()=>{
+            
+            data.pop();
+            div.innerHTML=null;
+            localStorage.setItem("Products",JSON.stringify(data))
+        }
+        let sold_btn=document.createElement("button")
+        sold_btn.innerText="Sold";
+        sold_btn.setAttribute("id","sold");
+        sold_btn.onclick= function takeaction(){
+            if(sold.innerText ==="True"){
+                sold_btn.style.backgroundColor="red";
+                sold.innerText="False"
+            }
+            else{
+                sold_btn.style.backgroundColor="green";
+                sold.innerText="True"
+            }
 
-        let button = document.createElement("button")
-        button.innerText = "Sold"
-        button.className = "bub"
+        }
 
         
         div.append(name, category, image, price ,button, button1)
         stock.appendChild(div)
         
     }
+
+
+
+    
+
+
 </script>
