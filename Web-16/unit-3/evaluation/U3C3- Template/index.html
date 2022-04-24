@@ -26,6 +26,11 @@
   // voucher data fetch
   let show_data = document.getElementById("main");
 
+    // getting wallet balance
+    var amount = localStorage.getItem("wallet")
+  var wallet_value = document.getElementById("wallet")
+  wallet_value.innerHTML = amount;
+
   async function voucher() {
    
     try {
@@ -46,10 +51,19 @@
 
         let price = document.createElement("p")
         price.innerHTML = "Rs " +  result[0].vouchers[i].price
+        price.className = "price"
 
         let button = document.createElement("button")
         button.innerText = "Buy"
-        button.id = "buy" 
+        button.setAttribute("id","remove");
+        button.onclick= ()=>{
+
+          let price = document.getElementsByClassName("price");
+          // console.log("ok",price)
+
+          wallet_value.innerHTML = Number(amount) - Number(price) ;
+
+        }
 
         let div = document.createElement("div")
         div.className = "Voucher_details"
@@ -66,18 +80,11 @@
   }
   voucher();
 
+// //buy-balance deduct
 
-  // getting wallet balance
-  var amount = localStorage.getItem("wallet")
-  var wallet_value = document.getElementById("wallet")
-  wallet_value.innerHTML = amount
+//    var box = document.getElementById("Voucher_details");
 
+//    var purchases = localStorage.setItem("purchases", newValue)
 
-//buy-balance deduct
-//  function buy() {
-
-//    var purchases = document.getElementById("Voucher_details")
-
-//    localStorage.setItem("purchases", purchases)
-//  }
+   
 </script>

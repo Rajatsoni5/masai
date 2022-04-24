@@ -19,14 +19,14 @@ function myArray(){
 // let arr = new myArray(1,2,3,4)
 console.log("arr1", arr1)
 
-myArray.prototype.push = function (index){
+// myArray.prototype.push = function (index){
 
-// this.value = 
-this.index= this.length+1;
+// // this.value = 
+// this.index= this.length+1;
 
-this.length++;
-}
-arr1.push(6)
+// this.length++;
+// }
+// arr1.push(6)
 
 myArray.prototype.pop = function (index){
 
@@ -35,5 +35,6 @@ myArray.prototype.pop = function (index){
 
 myArray.prototype.print = function (index){
 
-    
+    console.log(arr1)
 }
+arr1.print()
