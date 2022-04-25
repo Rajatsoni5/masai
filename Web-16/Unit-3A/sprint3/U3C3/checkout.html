@@ -5,6 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checkout</title>
+    <style>
+      #navbar{
+        display: flex;
+        background-color: aqua;
+        height: 60px;
+        justify-content: space-between;
+        padding: 10px;
+      }
+    </style>
   </head>
   <body>
     <div id="navbar">
@@ -15,6 +24,9 @@
       <!-- input field to accept user name with id as "user_name"  -->
       <!-- input field to accept number of seats with id as "number_of_seats"  -->
       <!-- A submit button to confirm booking with id as "confirm"  -->
+      <input type="text" placeholder="Name" id="user_name">
+      <input type="number" placeholder="Number of seats" id="number_of_seats">
+      <button id="confirm">Submit</button>
     </div>
 
     <div id="movie">
@@ -22,5 +34,8 @@
       <!-- movie should have title and image  -->
       <!-- It should be the same movie you selected for booking  -->
     </div>
+
+
+    <script src="./scripts/checkout.js"></script>
   </body>
 </html>

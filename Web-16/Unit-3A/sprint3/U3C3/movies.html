@@ -5,6 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movies</title>
+    <style>
+            #navbar{
+        display: flex;
+        background-color: aqua;
+        height: 60px;
+        justify-content: space-between;
+        padding: 10px;
+      }
+      #search{
+        width: 400px;
+        height: 30px;
+        margin-left: 34%;
+        margin-top: 10px;
+      }
+      #movies{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        align-items: center;
+      }
+      .box{
+
+        text-align: center;
+
+      }
+    </style>
   </head>
   <body>
     <div id="navbar">
@@ -14,6 +40,7 @@
     <div id="search_bar">
       <!-- input box for searching movies with id as "search" -->
       <!-- No button should be there for searching movies, it should search with input  -->
+      <input oninput="Debounc(main,1000)" placeholder="Search Movie Name" type="text" id="search">
     </div>
 
     <div id="movies">
@@ -21,5 +48,8 @@
       <!-- Every movie card should have image, title and a book now button  -->
       <!-- Book now buttons should have class "book_now"  -->
     </div>
+
+
+    <script src="./scripts/movies.js"></script>
   </body>
 </html>
