@@ -62,6 +62,19 @@ const appendVideos = (data) => {
     }
 };
 
+// let stuff = document.getElementsByClassName("video");
+// stuff.addEventListener("click", function(){
+
+    
+
+//     let iframe = `https://www.youtube.com/embed/${el.id.videoId}`
+
+//     localStorage.setItem("selected", iframe)
+
+//     window.location.href = "video.html"
+
+// })
+
 
 
 
