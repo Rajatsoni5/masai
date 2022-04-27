@@ -1,0 +1,11 @@
+#Navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+#options{
+    display: flex;
+    gap: 15px;
+}

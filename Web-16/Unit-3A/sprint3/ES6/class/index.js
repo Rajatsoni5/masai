@@ -9,6 +9,16 @@
 
 //api key - AIzaSyD89hd_35X_COpV5IE8h18YHlihKmsy2G0
 
+let popular = document.getElementById("popular");
+
+popular.addEventListener("click", async () => {
+
+    let pop = await  fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&char`);
+    let most = pop.json()
+    console.log("most", most)
+})
+
+
 const search_results_div = document.getElementById("search_results")
 
 const searchVideos = async () => {
