@@ -1,7 +1,18 @@
-let arr1 = new myArray(1,2,3,4)
+//Create Custom Hindi Array functions
 
-function myArray(){
-    
+//Array Connstructor function
+
+let a1 = new Array("x", "y", "z");
+
+//arguments object
+//this -> object
+function myArray() {
+  Object.defineProperty(this, "length", {
+    value: 0,
+    writable: true,
+    enumerable: false, //dont count this property
+  });
+
   this.length = arguments.length;
 
   // 0: x
@@ -14,27 +25,27 @@ function myArray(){
   for (let i = 0; i < this.length; i++) {
     this[i] = arguments[i];
   }
+}
+
+let a2 = new myArray("x", "y", "z");
+
+myArray.prototype.पुश = function (value) {
+  let index = this.length;
+  this[index] = value;
+  this.length++;
 };
 
-// let arr = new myArray(1,2,3,4)
-console.log("arr1", arr1)
+myArray.prototype.हटाओ = function () {
+  let index = this.length - 1;
 
-// myArray.prototype.push = function (index){
+  delete this[index];
 
-// // this.value = 
-// this.index= this.length+1;
+  this.length--;
+};
 
-// this.length++;
-// }
-// arr1.push(6)
+a2.पुश("a");
+a2.पुश("b");
+a2.हटाओ();
+a2.हटाओ();
 
-myArray.prototype.pop = function (index){
-
-
-}
-
-myArray.prototype.print = function (index){
-
-    console.log(arr1)
-}
-arr1.print()
+console.log("a2:", Object.values(a2));
