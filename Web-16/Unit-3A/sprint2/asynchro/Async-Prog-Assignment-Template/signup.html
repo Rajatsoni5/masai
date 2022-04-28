@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Signup</title>
+    </head>
+    <style>
+        #navbar{
+         width:90%;
+         height:50px;
+         border: 1px solid black;
+         display: flex;
+         background-color:whitesmoke; 
+         margin: auto;
+    
+    
+        }
+        #rhs{
+            width:50%;
+            height:45px;
+            /* border: 1px solid red; */
+            
+            
+        }
+        #lhs>div{
+            width:50%;
+            height:35px;
+            /* border: 1px solid red; */
+    
+        }
+        #lhs{
+            width:50%;
+            height:45px;
+            /* border: 1px solid red;   */
+            display:flex;
+            margin: auto;
+           
+        }
+        .navbtn{
+            width:50%;
+            height:80%;
+            background-color: whitesmoke;
+            color:rgb(52, 51, 51);
+            border-radius: 5px;
+            margin-top: 8px;
+        }
+        #regist_form{
+            margin-top: 50px;
+            height:20px;
+            width:200px;
+            display: flex;;
+            flex-direction: column;
+            margin: auto;
+            gap:15px;
+        }
+        #signup-form-div{
+            /* border: 1px solid red; */
+            margin-top: 50px;
+        }
+    </style>
+    <body>
+        <div id="navbar">
+
+            <div id="rhs">
+                
+            </div>
+            <div id="lhs">
+
+                <div><button class="navbtn" id="btn1">Index Page</button></div>
+                <div><button class="navbtn" id="btn2">Login Page</button></div>
+                <div><button class="navbtn" id="btn3">Signup Page</button></div>
+                
+            </div>
+            
+        </div>
+        <div id="signup-form-div">
+
+            <form id="regist_form" onsubmit="storedata(event)">
+                <!--Write form input elements here-->
+                <input type="text" id="name" placeholder="Name">
+                <input type="text" id="phone" placeholder="phone">
+                <input type="text" id="email" placeholder="email">
+                <input type="text" id="username" placeholder="username">
+                <input type="number" id="password" placeholder="password">
+                <input type="submit" id="submit">
+
+            </form>
+
+        </div>
+    </body>
+
+</html>
+<script src="./scripts/signup.js"></script>
