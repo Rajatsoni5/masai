@@ -1,0 +1,13 @@
+#container{
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-gap: 20xp;
+    width: 80%;
+    margin: auto;
+}
+.box img{
+    width: 230px;
+    height: 300px;
+
+
+}

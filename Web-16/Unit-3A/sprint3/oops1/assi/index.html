@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    inheritance
+    Q1.family
+     class grandparents{
+         constructor(c,value){
+             this.color=c;
+             this.id=value;
+
+         }
+     }
+
+  class parents extends grandparents{
+         constructor(c,value,d){
+            super(c,value);
+            this.DNA=d;
+            this.blood= "AB+";
+         }
+     }
+     class child extends parents{
+        constructor(c,value,d){
+            super(c,value,d);
+            this.name="Sachin";
+        }
+     }
+    let c1=new child("white","false","same");
+    console.log("c1:",c1)
+
+ //  Q2. cat inheritance
+
+    class cat{
+         constructor(l,s){
+             this.legs=l;
+             this.species=s;
+            this.fours= "true";
+         }
+     }
+
+  class tiger extends cat{
+         constructor(l,s,value){
+            super(l,s);
+            this.speed= 60;
+            this.tail=value;
+        
+         }
+     }
+     class lion extends tiger{
+        constructor(l,s,value){
+            super(l,s,value);
+            this.name="simba";
+        }
+     }
+    
+    let l1 =new lion("four","cat","true");
+    console.log("l1:",l1);
+
+// //    encapsulation
+
+ class payment{
+   constructor(){
+       var name;
+       var card_no;
+       var cvv;
+
+   }  
+   getName() { 
+       return this.name; 
+  
+    }
+    setName(value){
+        this.name=value;
+  
+    }
+ }
+ 
+ let p1=new payment();
+ p1.setName("Sachin")
+ console.log(p1.getName());
+
+
+//  Abstraction
+
+class student{
+    constructor(n,r){ 
+        this.name=n;
+        this.roll_no=r;
+        this.skills=[];
+
+        this.learnskills=function(skill){
+            this.skills.push(skill);
+        };
+
+    }
+}
+
+let s1= new student("Sachin",08);
+s1.learnskills("Singing");
+console.log("s1:",s1);
+
+
+// polymorphism
+
+class grandmaa{
+    run(){
+    console.log("grandmaa is very sweet");
+    }
+}
+class maa{
+    run(){
+    console.log("maa is very lovely");
+    }
+}
+class me{
+    run(){
+    console.log("me is very handsome");
+    }
+}
+let g1 =new grandmaa();
+let g2= new maa();
+let g3= new me();
+g2.run();
+
+</script>

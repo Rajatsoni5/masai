@@ -1,0 +1,40 @@
+body{
+    background-color: black;
+    color: white;
+}
+h1{
+    font-style: italic;
+    color: goldenrod;
+    text-align: center;
+    /* padding-bottom: 15px; */
+    font-size: 35px;
+}
+#hotline{
+    display: flex;
+    background-color: goldenrod;
+    justify-content: space-evenly;
+    /* flex-direction: column; */
+    /* background-color: rgb(207, 127, 127); */
+}
+#input{
+    margin-top: 15px;
+    margin-right: 0%;
+    width: 500px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+.two{
+display: flex;
+gap: 70px;
+
+}
+a{
+    font-size: 20px;
+    color: black;
+}
+#dishes{
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 20%);
+}
