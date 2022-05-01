@@ -1,4 +1,4 @@
-class IPL {
+class Vehicle {
     constructor(type, regNumber, color) {
       this._type = type;
       this._regNumber = regNumber;
