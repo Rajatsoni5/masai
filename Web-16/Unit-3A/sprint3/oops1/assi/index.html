@@ -7,13 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>OOPS 1 - Assigment</h1>
 </body>
 </html>
 <script>
 
-    inheritance
-    Q1.family
+    // inheritance
+    // Q1.family
      class grandparents{
          constructor(c,value){
              this.color=c;
@@ -26,16 +26,16 @@
          constructor(c,value,d){
             super(c,value);
             this.DNA=d;
-            this.blood= "AB+";
+            this.blood= "B+";
          }
      }
      class child extends parents{
         constructor(c,value,d){
             super(c,value,d);
-            this.name="Sachin";
+            this.name="Rajat";
         }
      }
-    let c1=new child("white","false","same");
+    let c1=new child("brown","true","same");
     console.log("c1:",c1)
 
  //  Q2. cat inheritance
@@ -51,7 +51,7 @@
   class tiger extends cat{
          constructor(l,s,value){
             super(l,s);
-            this.speed= 60;
+            this.speed= 40;
             this.tail=value;
         
          }
@@ -59,7 +59,7 @@
      class lion extends tiger{
         constructor(l,s,value){
             super(l,s,value);
-            this.name="simba";
+            this.name="jacky";
         }
      }
     
@@ -86,7 +86,7 @@
  }
  
  let p1=new payment();
- p1.setName("Sachin")
+ p1.setName("Hemant")
  console.log(p1.getName());
 
 
@@ -105,8 +105,8 @@ class student{
     }
 }
 
-let s1= new student("Sachin",08);
-s1.learnskills("Singing");
+let s1= new student("Hemant",08);
+s1.learnskills("cricket");
 console.log("s1:",s1);
 
 
@@ -119,17 +119,18 @@ class grandmaa{
 }
 class maa{
     run(){
-    console.log("maa is very lovely");
+    console.log("maa is everything");
     }
 }
 class me{
     run(){
-    console.log("me is very handsome");
+    console.log("me as universe");
     }
 }
 let g1 =new grandmaa();
 let g2= new maa();
 let g3= new me();
 g2.run();
+g3.run()
 
 </script>
